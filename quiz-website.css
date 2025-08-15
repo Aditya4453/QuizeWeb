@@ -165,153 +165,11 @@ body {
 /* ========== CONTAINERS ========== */
 .container {
   max-width: var(--container-xl);
-  margin: 0 auto;
+  /* margin: 0 auto; */
   padding: 0 var(--space-20);
 }
   
-  /* ========== NAVIGATION ========== */
-.header {
-  background: #FFF6F3;
-    padding: 10px 0;
-    box-shadow: var(--shadow-sm);
-    position: relative;
-    z-index: 1000;
-    border-bottom: 1px solid var(--color-border);
-}
 
-.nav-container {
-    max-width: var(--container-xl);
-    margin: 0 auto;
-    
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-}
-
-/* Mobile Menu Toggle */
-.mobile-menu-toggle {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-    padding: var(--space-8);
-    z-index: 1001;
-}
-
-.mobile-menu-toggle span {
-    width: 25px;
-    height: 3px;
-    background: var(--color-text);
-    margin: 3px 0;
-    transition: 0.3s;
-    border-radius: 2px;
-}
-
-.mobile-menu-toggle.active span:nth-child(1) {
-    transform: rotate(-45deg) translate(-5px, 6px);
-}
-
-.mobile-menu-toggle.active span:nth-child(2) {
-    opacity: 0;
-}
-
-.mobile-menu-toggle.active span:nth-child(3) {
-    transform: rotate(45deg) translate(-5px, -6px);
-}
-
-.logo img {
-    height: 40px;
-    width: auto;
-}
-
-.nav-menu {
-    display: flex;
-    list-style: none;
-    gap: var(--space-32);
-}
-
-.nav-menu a {
-    text-decoration: none;
-    color: var(--color-text);
-    font-weight: var(--font-weight-medium);
-    font-size: 17px;
-    transition: color var(--duration-fast) var(--ease-standard);
-}
-
-.nav-menu a:hover {
-    color: var(--color-primary);
-}
-
-/* Dropdown Styles */
-.dropdown {
-    position: relative;
-}
-
-.dropdown a {
-    display: flex;
-    align-items: center;
-    gap: 4px;
-}
-
-.dropdown a i {
-    font-size: 10px;
-    transition: transform var(--duration-fast) var(--ease-standard);
-}
-
-.dropdown:hover a i {
-    transform: rotate(180deg);
-}
-
-.dropdown-menu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background: white;
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius-base);
-    box-shadow: var(--shadow-lg);
-    min-width: 180px;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(-10px);
-    transition: all var(--duration-normal) var(--ease-standard);
-    z-index: 1000;
-    list-style: none;
-    padding: var(--space-8) 0;
-    margin: 0;
-}
-
-.dropdown:hover .dropdown-menu {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-}
-
-.dropdown-menu li {
-    margin: 0;
-}
-
-.dropdown-menu a {
-    display: block;
-    padding: var(--space-12) var(--space-16);
-    color: var(--color-text);
-    text-decoration: none;
-    font-size: var(--font-size-base);
-    font-weight: var(--font-weight-medium);
-    transition: all var(--duration-fast) var(--ease-standard);
-    border: none;
-    gap: 0;
-}
-
-.dropdown-menu a:hover {
-    background: var(--color-secondary);
-    color: var(--color-primary);
-    transform: none;
-}
-
-.dropdown-menu a i {
-    display: none;
-}
   /* ========== HERO ========== */
   .hero {
     display: flex;
@@ -320,7 +178,7 @@ body {
     gap: 2.5rem;
     padding-top: 2.5rem;
     padding-bottom: 2rem;
-    margin: 5rem auto;
+    margin: 10rem auto;
   }
   .hero__content {
     flex: 1 1 320px;
@@ -369,8 +227,8 @@ body {
     margin-bottom: 1.2em;
   }
   .hero__visual img{
-    width: 660px;
-    height: 600px;
+    width: 600px;
+    height: 590px;
   }
   .btn {
     display: inline-block;
@@ -403,6 +261,7 @@ body {
   .section__heading {
     color: #151F4C;
     font-size: 4rem;
+    margin: 0;
     font-weight: 700;
     text-align: center;
     margin-bottom: 0.3em;
@@ -465,7 +324,8 @@ body {
   /* ========== WHY CHOOSE US ========== */
   .why-choose {
     background: url(images/Gemini_Generated_Image_puioefpuioefpuio\ 1.png);
-    padding: 6rem 0;
+    padding: 11.9rem 0;
+    
     margin: 14rem auto;
     color: white;
   }
@@ -517,6 +377,7 @@ body {
    margin: 0;
     text-align: left;
     color: white;
+    width: 60%;
   }
   
   /* ========== QUIZ CATEGORIES ========== */
@@ -593,94 +454,7 @@ body {
     padding: 0;
     line-height: 1.5;
   }
-  
-/* Footer */
-.footer {
-    background: #141E4B;
-    padding: var(--space-32) 0 var(--space-20);
-    color: var(--color-gray-200);
-}
-.footer .container{
-  margin: 13vh auto;
-}
-.footer-content {
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr;
-    gap: var(--space-32);
-    margin-bottom: var(--space-32);
-}
 
-.footer-logo p {
-    margin: var(--space-20) 0;
-    color: var(--color-gray-300);
-    line-height: var(--line-height-normal);
-    font-size: 20px;
-}
-
-.social-links {
-    display: flex;
-    gap: var(--space-16);
-}
-
-.social-links a {
-    width: 40px;
-    height: 40px;
-    /* background: rgba(var(--color-gray-200-rgb), 0.1); */
-    border-radius: var(--radius-full);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--color-gray-200);
-    transition: all var(--duration-normal) var(--ease-standard);
-}
-
-.social-links a:hover {
-    /* background: var(--color-primary); */
-    transform: translateY(-2px);
-}
-.footer-section{
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-.contact-details{
-  gap: 2rem;
-}
-.contact-details p{
-  font-size: 15px;
-}
-.contact-details p a{
-  text-decoration: none;
-  color: white;
-}
-.footer-section h4 {
-    font-size: 25px;
-    font-weight: var(--font-weight-semibold);
-    margin: 0;
-    color: var(--color-gray-200);
-}
-
-.footer-section ul {
-    list-style: none;
-    padding: 0;
-}
-
-.footer-section ul li {
-    margin-bottom: var(--space-12);
-}
-
-.footer-section ul li a {
-    color: var(--color-gray-300);
-    text-decoration: none;
-    font-size: 20px;
-    transition: color var(--duration-fast) var(--ease-standard);
-}
-
-.footer-section ul li a:hover {
-    color: var(--color-primary);
-}
-
-  
   /* ========== RESPONSIVE ========== */
   @media (min-width: 860px) {
     .hero {
@@ -690,6 +464,7 @@ body {
       min-height: 400px;
       padding-top: 3.5rem;
       padding-bottom: 2.5rem;
+      margin: 5rem 20rem;
     }
     .features__cards {
       flex-direction: row;

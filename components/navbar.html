@@ -1,0 +1,179 @@
+<style>
+.header {
+  background: #FFF6F3;
+    padding: 1rem;
+    
+    position: relative;
+    z-index: 1000;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.nav-container {
+    /* max-width: var(--container-xl); */
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+}
+
+/* Mobile Menu Toggle */
+.mobile-menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: var(--space-8);
+    z-index: 1001;
+}
+
+.mobile-menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background: var(--color-text);
+    margin: 3px 0;
+    transition: 0.3s;
+    border-radius: 2px;
+}
+
+.mobile-menu-toggle.active span:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.mobile-menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.mobile-menu-toggle.active span:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.logo img {
+    height: 40px;
+    width: auto;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color:#203047;
+    font-weight: 400;
+    font-size: 17px;
+    transition: color var(--duration-fast) var(--ease-standard);
+}
+
+.nav-menu a:hover {
+    color: var(--color-primary);
+}
+
+/* Dropdown Styles */
+.dropdown {
+    position: relative;
+}
+
+.dropdown a {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.dropdown a i {
+    font-size: 10px;
+    transition: transform var(--duration-fast) var(--ease-standard);
+}
+
+.dropdown:hover a i {
+    transform: rotate(180deg);
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    box-shadow: var(--shadow-lg);
+    min-width: 180px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 250ms cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: 1000;
+    list-style: none;
+    padding: 8px 0;
+    margin: 0;
+}
+
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-menu li {
+    margin: 0;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 12px 16px;
+    color: #203047;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 400;
+    transition: all var(--duration-fast) var(--ease-standard);
+    border: none;
+    gap: 0;
+}
+
+.dropdown-menu a:hover {
+    background: rgba(0, 0, 0, 0.289);
+    color: rgb(255, 255, 255);
+    transform: none;
+}
+
+.dropdown-menu a i {
+    display: none;
+}
+</style>
+<header class="header">
+  <nav class="nav-container">
+    <div class="logo">
+      <img src="./images/placeholder-logo.png" alt="Quizango Logo" width="36" height="36">
+      
+    </div>
+    <div class="mobile-menu-toggle" id="mobile-menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <ul class="nav-menu" id="nav-menu">
+      <li><a href="index.html">Home</a></li>
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle">Publishers <i class="fas fa-chevron-down"></i></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Web Publishers</a></li>
+          <li><a href="#">App Publishers</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle">Products <i class="fas fa-chevron-down"></i></a>
+        <ul class="dropdown-menu">
+          <li><a href="puno-games.html">PUNO Games</a></li>
+          <li><a href="quiz-website.html">Karekaise</a></li>
+        </ul>
+      </li>
+      <li><a href="#">For Advertisers</a></li>
+      <li><a href="#">Blog</a></li>
+      <li><a href="#">Contact Us</a></li>
+    </ul>
+  </nav>
+  <div class="nav-overlay" id="nav-overlay"></div>
+</header>

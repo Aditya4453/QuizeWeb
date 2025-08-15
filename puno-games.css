@@ -1,0 +1,428 @@
+/* PUNO Games Specific Styles */
+:root {
+  --puno-primary: #FA743E;
+  --puno-secondary: #151F4C;
+  --puno-accent: #32D74B;
+  --puno-bg-light: #FFF6F3;
+  --puno-bg-dark: linear-gradient(135deg, #1e3a8a 0%, #7c3aed 50%, #dc2626 100%);
+}
+body{
+    font-family: "outfit",sans-serif;
+    background: url(images/background.png);
+    background-size: cover;
+    margin: 0;
+}
+/* Hero Section */
+.hero {
+  /* background: var(--puno-bg-light); */
+  background: url("images/bANNER\ 3.png");
+  
+  background-repeat: no-repeat;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  padding: 0 14rem;
+}
+
+.hero-container {
+  max-width: var(--container-xl);
+  margin: 0 auto;
+  padding: 0 var(--space-20);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.hero-content h1 {
+  margin-bottom: 2rem;
+}
+
+.hero__heading-1 {
+  display: block;
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--puno-secondary);
+  line-height: 1.2;
+}
+
+.hero__heading-3 {
+  display: block;
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--puno-primary);
+  line-height: 1.2;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  color:#151F4C;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+.btn-primary{
+    background-color:#FA743E;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 20px;
+    text-decoration: none;
+}
+.btn{
+    font-size: 1.2rem;
+    font-weight: 500;
+    font-family: "outfit",sans-serif;
+}
+.btn-outline {
+  text-decoration: underline;  
+  color: var(--puno-primary);
+  padding: 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+  /* background: var(--puno-primary); */
+  color: white;
+}
+
+/* Game Icons Grid */
+.game-icons-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.5rem;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.game-icon {
+  background: white;
+  border-radius: 16px;
+  padding: 1rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.game-icon:hover {
+  transform: translateY(-5px) scale(1.05);
+}
+
+.game-icon:nth-child(odd) {
+  animation: float1 3s ease-in-out infinite;
+}
+
+.game-icon:nth-child(even) {
+  animation: float2 3s ease-in-out infinite 1.5s;
+}
+
+@keyframes float1 {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes float2 {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(10px); }
+}
+
+/* Why PUNO Section */
+.why-puno {
+  padding: 5rem;
+  text-align: center;
+
+}
+
+.why-puno h2 {
+  font-size: 4rem;
+  font-weight: 700;
+  color: var(--puno-secondary);
+  margin-bottom: 1rem;
+}
+
+.section-subtitle {
+  font-size: 1.5rem;
+  color: #151f4cdc;
+  margin-bottom: 3rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 85%;
+  text-align: center;
+}
+
+.puno-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.puno-feature {
+  background: white;
+  padding: 2.5rem 2rem;
+  border-radius: 20px;
+  box-shadow: 0 6px 30px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.puno-feature:hover {
+  transform: translateY(-10px);
+}
+
+.puno-feature h3 {
+  font-size: 1.7rem;
+  color: var(--puno-secondary);
+  margin: 1.5rem 0 1rem;
+  width: 80%;
+  text-align: center;
+}
+
+.puno-feature p {
+  color: #151f4ce0;
+  font-size: 1rem;
+}
+
+/* Gaming Experience Section */
+.gaming-experience {
+background:url("images/pg-sec3.png");
+  padding: 9.8rem 2rem;
+  margin: 5rem 0;
+  color: white;
+}
+
+.gaming-experience .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+.experience-content{
+    padding-left: 5rem ;
+}
+.experience-content h2 {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  color: white;
+}
+
+.experience-content p {
+  font-size: 1.4rem;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  color: rgba(255,255,255,0.9);
+}
+
+.experience-visual {
+  position: relative;
+}
+
+.experience-visual img {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+}
+
+/* Turn-Key Solution */
+.turnkey-solution {
+  padding: 5rem 13rem;
+  text-align: center;
+}
+
+.turnkey-solution h2 {
+  font-size: 4rem;
+  font-weight: 700;
+  color: var(--puno-secondary);
+  margin-bottom: 1rem;
+}
+
+.solution-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(280px, 1fr));
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+.solution-card {
+  background: white;
+  padding: 2.5rem 2rem;
+  border-radius: 20px;
+  box-shadow: 0 6px 30px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  text-align: center;
+}
+
+.solution-card:hover {
+  transform: translateY(-8px);
+}
+
+.solution-card h3 {
+  font-size: 1.3rem;
+  color: var(--puno-secondary);
+  margin: 1.5rem 0 1rem;
+}
+
+.solution-card p {
+  color:#151F4C;
+  line-height: 1.6;
+}
+
+.cta-section {
+  margin-top: 5rem;
+}
+
+.btn-lg {
+  padding: 1rem 3rem;
+  font-size: 1.2rem;
+}
+
+/* Contact Form */
+.contact-form {
+  /* background: var(--puno-bg-light); */
+  padding: 5rem 0;
+}
+
+.contact-form h2 {
+  font-size: 4rem;
+  font-weight: 700;
+  color: var(--puno-secondary);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 800px;
+  margin: 3rem auto 0;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+    font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--puno-secondary);
+  margin-bottom: 0.5rem;
+}
+
+.form-control {
+  padding: 1rem;
+  border: 2px solid #e5e5e5;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: var(--puno-primary);
+  outline: none;
+}
+
+.form-actions {
+  grid-column: 1 / -1;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .hero-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 3rem;
+  }
+  
+  .gaming-experience .container {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero__heading-1,
+  .hero__heading-3 {
+    font-size: 2.2rem;
+  }
+  
+  .hero-buttons {
+    justify-content: center;
+  }
+  
+  .game-icons-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+  
+  .puno-features {
+    grid-template-columns: 1fr;
+  }
+  
+  .solution-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .why-puno h2,
+  .turnkey-solution h2,
+  .contact-form h2 {
+    font-size: 2.2rem;
+  }
+  
+  .experience-content h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 1rem 0;
+  }
+  
+  .hero-container {
+    padding: 0 1rem;
+  }
+  
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .btn, .btn-outline {
+    width: 100%;
+    max-width: 280px;
+  }
+  
+  .game-icons-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .puno-feature,
+  .solution-card {
+    padding: 2rem 1.5rem;
+  }
+}
