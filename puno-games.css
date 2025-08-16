@@ -25,7 +25,6 @@ body{
 }
 
 .hero-container {
-  max-width: var(--container-xl);
   margin: 0 auto;
   padding: 0 var(--space-20);
   display: grid;
@@ -201,7 +200,7 @@ body{
 /* Gaming Experience Section */
 .gaming-experience {
 background:url("images/pg-sec3.png");
-  padding: 9.8rem 2rem;
+  padding: 12.2rem 2rem;
   margin: 5rem 0;
   color: white;
 }
