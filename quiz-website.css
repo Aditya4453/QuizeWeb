@@ -118,7 +118,7 @@ img { max-width: 100%; height: auto; display: block; }
 .hero__heading-1 {
   display: block;
   color: #151F4C;
-  letter-spacing: 0.01em;
+  /* letter-spacing: 0.01em; */
   font-size: 4rem;
   font-weight: 500;
   margin-bottom: -20px;
@@ -129,7 +129,7 @@ img { max-width: 100%; height: auto; display: block; }
   font-size: 2.5rem;
   font-weight: 700;
   margin-top: 0.165em;
-  letter-spacing: -0.03em;
+  /* letter-spacing: -0.03em; */
   line-height: 1.08;
 }
 .hero__heading-3 {
@@ -434,6 +434,13 @@ img { max-width: 100%; height: auto; display: block; }
     flex-direction: column;
     align-items: center;
     text-align: center;
+  }
+  .hero__content h1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
   }
   .hero__heading-1, .hero__heading-3 { font-size: 2.2rem; }
   .features__cards { grid-template-columns: 1fr; gap: 1rem; }
