@@ -10,14 +10,12 @@
             --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.1);
         }
 
-        
-
         .header {
             background: #FFF6F3;
             padding: 1rem;
             font-family: "outfit",sans-serif;
             position: relative;
-            z-index: 1000;
+            z-index: 1001;
             border-bottom: 1px solid var(--color-border);
         }
 
@@ -62,10 +60,14 @@
             display: none;
             flex-direction: column;
             cursor: pointer;
-            padding: var(--space-8);
-            z-index: 1001;
+            padding: 12px;
+            min-width: 44px;
+            min-height: 44px;
+            z-index: 1002;
             background: none;
             border: none;
+            align-items: center;
+            justify-content: center;
         }
 
         .mobile-menu-toggle span {
@@ -100,13 +102,17 @@
             gap: 4px;
         }
 
-        .dropdown a i {
+        /* Dropdown toggle button - Hidden on desktop */
+        .dropdown-toggle-btn {
+            display: none;
+            background: none;
+            border: none;
             font-size: 10px;
+            color: var(--color-text);
+            cursor: pointer;
+            padding: 4px;
+            margin-left: 4px;
             transition: transform var(--duration-fast) var(--ease-standard);
-        }
-
-        .dropdown:hover a i {
-            transform: rotate(180deg);
         }
 
         .dropdown-menu {
@@ -122,16 +128,19 @@
             visibility: hidden;
             transform: translateY(-10px);
             transition: all 250ms cubic-bezier(0.16, 1, 0.3, 1);
-            z-index: 1000;
+            z-index: 1002;
             list-style: none;
             padding: 8px 0;
             margin: 0;
         }
 
-        .dropdown:hover .dropdown-menu {
-            opacity: 1;
-            visibility: visible;
-            transform: translateY(0);
+        /* Desktop hover behavior - only on larger screens */
+        @media screen and (min-width: 769px) {
+            .dropdown:hover .dropdown-menu {
+                opacity: 1;
+                visibility: visible;
+                transform: translateY(0);
+            }
         }
 
         .dropdown-menu li {
@@ -150,14 +159,14 @@
             gap: 0;
         }
 
+        .dropdown-menu a::after {
+            display: none;
+        }
+
         .dropdown-menu a:hover {
             background: rgba(0, 0, 0, 0.289);
             color: rgb(255, 255, 255);
             transform: none;
-        }
-
-        .dropdown-menu a i {
-            display: none;
         }
 
         /* Nav Overlay for mobile */
@@ -168,8 +177,7 @@
             left: 0;
             width: 100%;
             height: 100vh;
-            /* background: rgba(0, 0, 0, 0.5); */
-            z-index: 999;
+            z-index: 1000;
             opacity: 0;
             transition: opacity 0.3s ease;
         }
@@ -177,6 +185,13 @@
         .nav-overlay.active {
             display: block;
             opacity: 1;
+        }
+
+        /* Body scroll lock for mobile menu */
+        body.menu-open {
+            position: fixed;
+            width: 100%;
+            overflow: hidden;
         }
 
         /* Tablet Styles */
@@ -218,6 +233,7 @@
                 box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
                 transition: right 0.3s ease;
                 overflow-y: auto;
+                z-index: 1001;
             }
 
             .nav-menu.active {
@@ -240,6 +256,8 @@
                 font-size: 16px;
                 font-weight: 500;
                 color: #203047;
+                position: relative;
+                z-index: 1002;
             }
 
             /* Mobile Dropdown Styles */
@@ -257,10 +275,27 @@
                 max-height: 0;
                 overflow: hidden;
                 transition: max-height 0.3s ease;
+                display: block;
+                border-left: 3px solid transparent;
             }
 
             .dropdown.active .dropdown-menu {
-                max-height: 200px;
+                max-height: 500px !important;
+                padding: 8px 0 !important;
+                opacity: 1 !important;
+                visibility: visible !important;
+                background: rgba(32, 48, 71, 0.1) !important;
+                border-left: 3px solid var(--color-primary) !important;
+            }
+
+            /* Force dropdown visibility when active */
+            .dropdown.active .dropdown-menu li {
+                display: block !important;
+            }
+
+            /* Show dropdown toggle buttons on mobile */
+            .dropdown-toggle-btn {
+                display: block !important;
             }
 
             .dropdown-menu a {
@@ -268,6 +303,13 @@
                 font-size: 14px;
                 font-weight: 400;
                 color: #203047;
+                display: block;
+                width: 100%;
+                border-bottom: 1px solid rgba(32, 48, 71, 0.1);
+            }
+
+            .dropdown-menu a:last-child {
+                border-bottom: none;
             }
 
             .dropdown-menu a:hover {
@@ -275,32 +317,49 @@
                 color: var(--color-primary);
             }
 
-            .dropdown > a {
+            .dropdown {
                 position: relative;
-                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
             }
 
-            .dropdown > a i {
+            .dropdown > a {
+                flex: 1;
+                padding-right: 50px;
+            }
+
+            .dropdown-toggle-btn {
                 position: absolute;
                 right: 0;
                 top: 50%;
                 transform: translateY(-50%);
                 transition: transform 0.3s ease;
+                background: none;
+                border: none;
+                font-size: 12px;
+                color: var(--color-text);
+                cursor: pointer;
+                padding: 8px;
+                min-width: 44px;
+                min-height: 44px;
+                z-index: 1003;
+                border-radius: 4px;
             }
 
-            .dropdown.active > a i {
+            .dropdown-toggle-btn:hover {
+                background: rgba(32, 48, 71, 0.1);
+            }
+
+            .dropdown.active .dropdown-toggle-btn {
                 transform: translateY(-50%) rotate(180deg);
             }
 
-            /* Hide desktop hover effects on mobile */
+            /* Disable hover effects on mobile */
             .dropdown:hover .dropdown-menu {
                 opacity: 0;
                 visibility: hidden;
                 transform: translateY(-10px);
-            }
-
-            .dropdown:hover a i {
-                transform: none;
             }
         }
 
@@ -320,7 +379,9 @@
             }
 
             .mobile-menu-toggle {
-                padding: 4px;
+                padding: 8px;
+                min-width: 40px;
+                min-height: 40px;
             }
 
             .mobile-menu-toggle span {
@@ -359,14 +420,16 @@
             <ul class="nav-menu" id="nav-menu">
                 <li><a href="./index.html">Home</a></li>
                 <li class="dropdown">
-                    <a href="./publishers.html" class="dropdown-toggle">Publishers <i class="fas fa-chevron-down"></i></a>
+                    <a href="./publishers.html">Publishers</a>
+                    <button class="dropdown-toggle-btn" aria-label="Toggle Publishers submenu">▼</button>
                     <ul class="dropdown-menu">
                         <li><a href="#web-publishers">Web Publishers</a></li>
                         <li><a href="#app-publishers">App Publishers</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
-                    <a href="#products" class="dropdown-toggle">Products <i class="fas fa-chevron-down"></i></a>
+                    <a href="#products">Products</a>
+                    <button class="dropdown-toggle-btn" aria-label="Toggle Products submenu">▼</button>
                     <ul class="dropdown-menu">
                         <li><a href="./puno-games.html">PUNO Games</a></li>
                         <li><a href="./quiz-website.html">Karekaise</a></li>
@@ -380,77 +443,88 @@
         <div class="nav-overlay" id="nav-overlay"></div>
     </header>
 
-    <script>
-        const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
-        const navMenu = document.getElementById('nav-menu');
-        const navOverlay = document.getElementById('nav-overlay');
-        const dropdowns = document.querySelectorAll('.dropdown');
+<script>
+    // Navbar, sidebar and dropdown Javascript for your HTML
+function initNav() {
+    const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+    const navMenu = document.getElementById('nav-menu');
+    const navOverlay = document.getElementById('nav-overlay');
+    const dropdowns = document.querySelectorAll('.dropdown');
 
-        // Mobile menu toggle
-        mobileMenuToggle.addEventListener('click', () => {
+    // Toggle mobile menu
+    if (mobileMenuToggle) {
+        mobileMenuToggle.addEventListener('click', function() {
             mobileMenuToggle.classList.toggle('active');
             navMenu.classList.toggle('active');
             navOverlay.classList.toggle('active');
-            document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : 'auto';
+            document.body.classList.toggle('menu-open');
         });
+    }
 
-        // Close menu when overlay is clicked
-        navOverlay.addEventListener('click', () => {
+    // Close mobile menu when overlay is clicked
+    if (navOverlay) {
+        navOverlay.addEventListener('click', function() {
             mobileMenuToggle.classList.remove('active');
             navMenu.classList.remove('active');
             navOverlay.classList.remove('active');
-            document.body.style.overflow = 'auto';
+            document.body.classList.remove('menu-open');
         });
-
-        // Handle dropdown clicks on mobile
-        // Handle dropdown clicks on mobile
-dropdowns.forEach(dropdown => {
-  const dropdownToggle = dropdown.querySelector('.dropdown-toggle');
-  dropdownToggle.addEventListener('click', (e) => {
-    if (window.innerWidth <= 768) {
-      const isActive = dropdown.classList.contains('active');
-      if (!isActive) {
-        // First tap: open submenu, block navigation
-        e.preventDefault();
-        dropdown.classList.add('active');
-        // Close other dropdowns
-        dropdowns.forEach(other => {
-          if (other !== dropdown) other.classList.remove('active');
-        });
-      } else {
-        // Second tap: allow navigation (no preventDefault)
-        // Menu will close via navLinks handler after navigation is initiated
-      }
     }
-  });
-});
 
+    // Handle dropdowns for mobile
+    dropdowns.forEach(function(dropdown) {
+        const toggleBtn = dropdown.querySelector('.dropdown-toggle-btn');
+        if (toggleBtn) {
+            toggleBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
 
-        // Close mobile menu when window is resized to desktop
-        window.addEventListener('resize', () => {
-            if (window.innerWidth > 768) {
-                mobileMenuToggle.classList.remove('active');
+                // Close all other dropdowns
+                dropdowns.forEach(function(otherDropdown) {
+                    if (otherDropdown !== dropdown) {
+                        otherDropdown.classList.remove('active');
+                    }
+                });
+
+                // Toggle current dropdown
+                dropdown.classList.toggle('active');
+            });
+        }
+    });
+
+    // Close dropdowns when resizing to desktop (>768px)
+    window.addEventListener('resize', function() {
+        if (window.innerWidth > 768) {
+            dropdowns.forEach(function(dropdown) {
+                dropdown.classList.remove('active');
+            });
+            navMenu.classList.remove('active');
+            navOverlay.classList.remove('active');
+            mobileMenuToggle.classList.remove('active');
+            document.body.classList.remove('menu-open');
+        }
+    });
+
+    // Close mobile nav and dropdowns when clicking a link (optional, UX best practice)
+    document.querySelectorAll('.nav-menu a').forEach(function(link) {
+        link.addEventListener('click', function() {
+            if (window.innerWidth <= 768) {
                 navMenu.classList.remove('active');
                 navOverlay.classList.remove('active');
-                document.body.style.overflow = 'auto';
-                
-                // Remove active state from dropdowns
-                dropdowns.forEach(dropdown => {
+                mobileMenuToggle.classList.remove('active');
+                document.body.classList.remove('menu-open');
+                dropdowns.forEach(function(dropdown) {
                     dropdown.classList.remove('active');
                 });
             }
         });
+    });
+}
 
-        // Close menu when clicking on navigation links (mobile)
-        const navLinks = document.querySelectorAll('.nav-menu a:not(.dropdown-toggle)');
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                if (window.innerWidth <= 768) {
-                    mobileMenuToggle.classList.remove('active');
-                    navMenu.classList.remove('active');
-                    navOverlay.classList.remove('active');
-                    document.body.style.overflow = 'auto';
-                }
-            });
-        });
-    </script>
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initNav);
+} else {
+    initNav();
+}
+
+</script>

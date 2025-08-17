@@ -381,7 +381,7 @@ a:hover {
 
 .features-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(266px, 1fr));
   gap: var(--space-32);
   margin-top: var(--space-32);
 }

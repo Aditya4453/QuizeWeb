@@ -1,27 +1,112 @@
-/* PUNO Games Specific Styles */
+/* ===============================
+   PUNO Games – Theme & Base
+   =============================== */
+
 :root {
   --puno-primary: #FA743E;
   --puno-secondary: #151F4C;
   --puno-accent: #32D74B;
   --puno-bg-light: #FFF6F3;
   --puno-bg-dark: linear-gradient(135deg, #1e3a8a 0%, #7c3aed 50%, #dc2626 100%);
+
+  /* Shared tokens for spacing/containers */
+  --space-8: 8px;
+  --space-12: 12px;
+  --space-16: 16px;
+  --space-20: 20px;
+  --space-24: 24px;
+  --space-32: 32px;
+
+  --container-xl: 1280px;
+
+  --radius-sm: 6px;
+  --radius: 10px;
+  --radius-lg: 20px;
+
+  --shadow-sm: 0 4px 20px rgba(0,0,0,0.1);
+  --shadow-lg: 0 20px 60px rgba(0,0,0,0.3);
+
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+  --transition: 0.3s var(--ease);
 }
-body{
-    font-family: "outfit",sans-serif;
-    background: url(images/background.png);
-    background-size: cover;
-    margin: 0;
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: "outfit", sans-serif;
+  background: url(images/background.png) no-repeat top center / cover;
+  margin: 0;
+  color: var(--puno-secondary);
 }
-/* Hero Section */
+
+img { max-width: 100%; height: auto; display: block; }
+
+.container {
+  max-width: var(--container-xl);
+  margin: 0 auto;
+  padding: 0 var(--space-20);
+}
+
+/* ===============================
+   Buttons
+   =============================== */
+
+.btn {
+  font-family: "outfit", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding: 1rem 1.25rem;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: transform 0.2s var(--ease), opacity 0.2s var(--ease);
+}
+
+.btn-primary {
+  background-color: var(--puno-primary);
+  color: #fff;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  transform: translateY(-2px) scale(1.03);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--puno-primary);
+  text-decoration: underline;
+  padding: 1rem 0.75rem;
+  border-radius: 8px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: color var(--transition), background var(--transition);
+}
+
+.btn-outline:hover,
+.btn-outline:focus {
+  color: #fff;
+  background: var(--puno-primary);
+}
+
+/* ===============================
+   Hero
+   =============================== */
+
 .hero {
-  /* background: var(--puno-bg-light); */
-  background: url("images/bANNER\ 3.png");
-  
-  background-repeat: no-repeat;
+  /* Keep your banner */
+  background: url("images/bANNER 3.png") no-repeat center / cover;
   min-height: 80vh;
   display: flex;
   align-items: center;
-  padding: 0 14rem;
+  padding: 0 6rem;
 }
 
 .hero-container {
@@ -33,9 +118,7 @@ body{
   align-items: center;
 }
 
-.hero-content h1 {
-  margin-bottom: 2rem;
-}
+.hero-content h1 { margin: 0 0 2rem 0; }
 
 .hero__heading-1 {
   display: block;
@@ -55,7 +138,7 @@ body{
 
 .hero-content p {
   font-size: 1.2rem;
-  color:#151F4C;
+  color: #151F4C;
   margin-bottom: 2rem;
   line-height: 1.6;
 }
@@ -65,36 +148,11 @@ body{
   gap: 1.5rem;
   flex-wrap: wrap;
 }
-.btn-primary{
-    background-color:#FA743E;
-    color: white;
-    border: none;
-    border-radius: 10px;
-    padding: 20px;
-    text-decoration: none;
-}
-.btn{
-    font-size: 1.2rem;
-    font-weight: 500;
-    font-family: "outfit",sans-serif;
-}
-.btn-outline {
-  text-decoration: underline;  
-  color: var(--puno-primary);
-  padding: 20px;
-  border-radius: 8px;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  transition: all 0.3s ease;
-}
 
-.btn-outline:hover {
-  /* background: var(--puno-primary); */
-  color: white;
-}
+/* ===============================
+   Game icons grid
+   =============================== */
 
-/* Game Icons Grid */
 .game-icons-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -104,27 +162,20 @@ body{
 }
 
 .game-icon {
-  background: white;
+  background: #fff;
   border-radius: 16px;
   padding: 1rem;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition);
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.game-icon:hover {
-  transform: translateY(-5px) scale(1.05);
-}
+.game-icon:hover { transform: translateY(-5px) scale(1.05); }
 
-.game-icon:nth-child(odd) {
-  animation: float1 3s ease-in-out infinite;
-}
-
-.game-icon:nth-child(even) {
-  animation: float2 3s ease-in-out infinite 1.5s;
-}
+.game-icon:nth-child(odd) { animation: float1 3s ease-in-out infinite; }
+.game-icon:nth-child(even){ animation: float2 3s ease-in-out infinite 1.5s; }
 
 @keyframes float1 {
   0%, 100% { transform: translateY(0); }
@@ -136,11 +187,13 @@ body{
   50% { transform: translateY(10px); }
 }
 
-/* Why PUNO Section */
-.why-puno {
-  padding: 5rem;
-  text-align: center;
+/* ===============================
+   Why PUNO
+   =============================== */
 
+.why-puno {
+  padding: 5rem 1.5rem;
+  text-align: center;
 }
 
 .why-puno h2 {
@@ -163,26 +216,24 @@ body{
 
 .puno-features {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
   gap: 2rem;
   margin-top: 3rem;
 }
 
 .puno-feature {
-  background: white;
+  background: #fff;
   padding: 2.5rem 2rem;
   border-radius: 20px;
-  box-shadow: 0 6px 30px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition);
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.puno-feature:hover {
-  transform: translateY(-10px);
-}
+.puno-feature:hover { transform: translateY(-10px); }
 
 .puno-feature h3 {
   font-size: 1.7rem;
@@ -195,14 +246,18 @@ body{
 .puno-feature p {
   color: #151f4ce0;
   font-size: 1rem;
+  margin: 0;
 }
 
-/* Gaming Experience Section */
+/* ===============================
+   Gaming Experience
+   =============================== */
+
 .gaming-experience {
-background:url("images/pg-sec3.png");
-  padding: 12.2rem 2rem;
+  background: url("images/pg-sec3.png") center/cover no-repeat;
+  padding: 7.9rem 2rem;
   margin: 5rem 0;
-  color: white;
+  color: #fff;
 }
 
 .gaming-experience .container {
@@ -211,13 +266,13 @@ background:url("images/pg-sec3.png");
   gap: 4rem;
   align-items: center;
 }
-.experience-content{
-    padding-left: 5rem ;
-}
+
+
+
 .experience-content h2 {
   font-size: 3rem;
   margin-bottom: 1.5rem;
-  color: white;
+  color: #fff;
 }
 
 .experience-content p {
@@ -227,19 +282,20 @@ background:url("images/pg-sec3.png");
   color: rgba(255,255,255,0.9);
 }
 
-.experience-visual {
-  position: relative;
-}
+.experience-visual { position: relative; }
 
 .experience-visual img {
   width: 100%;
   border-radius: 20px;
-  box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+  box-shadow: var(--shadow-lg);
 }
 
-/* Turn-Key Solution */
+/* ===============================
+   Turn-Key Solution
+   =============================== */
+
 .turnkey-solution {
-  padding: 5rem 13rem;
+  padding: 5rem 6rem;
   text-align: center;
 }
 
@@ -252,23 +308,25 @@ background:url("images/pg-sec3.png");
 
 .solution-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(280px, 1fr));
+  grid-template-columns: repeat(3, minmax(280px,1fr));
   gap: 2rem;
   margin: 3rem 0;
 }
 
 .solution-card {
-  background: white;
+  background: #fff;
   padding: 2.5rem 2rem;
   border-radius: 20px;
-  box-shadow: 0 6px 30px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition);
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.solution-card:hover {
-  transform: translateY(-8px);
-}
+.solution-card:hover { transform: translateY(-8px); }
 
 .solution-card h3 {
   font-size: 1.3rem;
@@ -277,24 +335,19 @@ background:url("images/pg-sec3.png");
 }
 
 .solution-card p {
-  color:#151F4C;
+  color: #151F4C;
   line-height: 1.6;
+  margin: 0;
 }
 
-.cta-section {
-  margin-top: 5rem;
-}
+.cta-section { margin-top: 5rem; }
+.btn-lg { padding: 1rem 3rem; font-size: 1.2rem; }
 
-.btn-lg {
-  padding: 1rem 3rem;
-  font-size: 1.2rem;
-}
+/* ===============================
+   Contact Form
+   =============================== */
 
-/* Contact Form */
-.contact-form {
-  /* background: var(--puno-bg-light); */
-  padding: 5rem 0;
-}
+.contact-form { padding: 5rem 0; }
 
 .contact-form h2 {
   font-size: 4rem;
@@ -306,19 +359,16 @@ background:url("images/pg-sec3.png");
 
 .contact-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
   gap: 2rem;
   max-width: 800px;
   margin: 3rem auto 0;
 }
 
-.form-group {
-  display: flex;
-  flex-direction: column;
-}
+.form-group { display: flex; flex-direction: column; }
 
 .form-group label {
-    font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: 400;
   color: var(--puno-secondary);
   margin-bottom: 0.5rem;
@@ -329,12 +379,15 @@ background:url("images/pg-sec3.png");
   border: 2px solid #e5e5e5;
   border-radius: 8px;
   font-size: 1rem;
-  transition: border-color 0.3s ease;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  background: #fff;
+  color: var(--puno-secondary);
 }
 
 .form-control:focus {
   border-color: var(--puno-primary);
   outline: none;
+  box-shadow: 0 0 0 3px rgba(250,116,62,0.25);
 }
 
 .form-actions {
@@ -343,85 +396,91 @@ background:url("images/pg-sec3.png");
   margin-top: 2rem;
 }
 
-/* Responsive Design */
+/* ===============================
+   Responsive
+   =============================== */
+
+/* <= 1200px: reduce hero padding */
+@media (max-width: 1200px) {
+  .hero { padding: 0 3rem; }
+  .turnkey-solution { padding: 5rem 3rem; }
+  .experience-content { padding-left: 2.5rem; }
+}
+
+/* <= 1024px: stack complex grids */
 @media (max-width: 1024px) {
   .hero-container {
     grid-template-columns: 1fr;
     text-align: center;
     gap: 3rem;
   }
-  
   .gaming-experience .container {
     grid-template-columns: 1fr;
     text-align: center;
     gap: 3rem;
   }
+  .solution-grid {
+    grid-template-columns: repeat(2, minmax(280px,1fr));
+    gap: 1.5rem;
+  }
 }
 
+/* <= 900px: headline scale */
+@media (max-width: 900px) {
+  .why-puno h2,
+  .turnkey-solution h2,
+  .contact-form h2 { font-size: 2.8rem; }
+  .experience-content h2 { font-size: 2.4rem; }
+}
+
+/* <= 768px: mobile-first adjustments */
 @media (max-width: 768px) {
   .hero__heading-1,
-  .hero__heading-3 {
-    font-size: 2.2rem;
-  }
-  
-  .hero-buttons {
-    justify-content: center;
-  }
-  
+  .hero__heading-3 { font-size: 2.2rem; }
+
+  .hero-buttons { justify-content: center; }
+
   .game-icons-grid {
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
   }
-  
-  .puno-features {
-    grid-template-columns: 1fr;
-  }
-  
-  .solution-grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-  
-  .contact-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .why-puno h2,
-  .turnkey-solution h2,
-  .contact-form h2 {
-    font-size: 2.2rem;
-  }
-  
-  .experience-content h2 {
-    font-size: 2rem;
-  }
+
+  .puno-features { grid-template-columns: 1fr; }
+
+  .solution-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+
+  .contact-grid { grid-template-columns: 1fr; }
+
+  .turnkey-solution { padding: 4rem 1.25rem; }
+
+  .gaming-experience { padding: 6rem 1rem; }
+
+  .experience-content { padding-left: 0; }
 }
 
+/* <= 580px: tighten paddings */
+@media (max-width: 580px) {
+  .hero { padding: 1.25rem 1rem; min-height: unset; }
+}
+
+/* <= 480px: narrow phones */
 @media (max-width: 480px) {
-  .hero {
-    padding: 1rem 0;
-  }
-  
-  .hero-container {
-    padding: 0 1rem;
-  }
-  
+  .hero { padding: 1rem 0; }
+
+  .hero-container { padding: 0 1rem; }
+
   .hero-buttons {
     flex-direction: column;
     align-items: center;
   }
-  
+
   .btn, .btn-outline {
     width: 100%;
     max-width: 280px;
   }
-  
-  .game-icons-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  
+
+  .game-icons-grid { grid-template-columns: repeat(2, 1fr); }
+
   .puno-feature,
-  .solution-card {
-    padding: 2rem 1.5rem;
-  }
+  .solution-card { padding: 2rem 1.5rem; }
 }
