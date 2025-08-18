@@ -1,0 +1,644 @@
+/* Import Poppins Font */
+/* Override font family */
+body {
+    font-family: "outfit",sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url("images/background.png");
+    overflow-x: hidden;
+    background-size: cover;
+}
+
+/* Hero Section */
+.advertisers-hero {
+    padding: 4rem 10rem;
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.hero-text h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+}
+
+.hero-label {
+    color: #626C71;
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+.hero-highlight {
+    color: var(--color-primary);
+    font-size: 2.5rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.hero-text p {
+    font-size: 1.1rem;
+    color: #626C71;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.hero-btn {
+    background: var(--color-primary);
+    color: white;
+    padding: 1rem 2.5rem;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.hero-btn:hover {
+    background: var(--color-primary-hover);
+    transform: translateY(-2px);
+}
+
+/* Hero Visual */
+.hero-visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.hero-illustration {
+    position: relative;
+    width: 300px;
+    height: 300px;
+}
+
+.telegram-circle {
+    width: 150px;
+    height: 150px;
+    background: #0088cc;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 10px 30px rgba(0, 136, 204, 0.3);
+}
+
+.telegram-circle i {
+    font-size: 3rem;
+    color: white;
+}
+
+.floating-icon {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+    animation: float 3s ease-in-out infinite;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.icon-dollar {
+    background: #F4B942;
+    top: 10%;
+    right: 15%;
+    animation-delay: 0s;
+}
+
+.icon-megaphone {
+    background: var(--color-primary);
+    top: 20%;
+    left: 10%;
+    animation-delay: 0.5s;
+}
+
+.icon-chart {
+    background: #28A745;
+    bottom: 20%;
+    right: 10%;
+    animation-delay: 1s;
+}
+
+.icon-bulb {
+    background: #FFC107;
+    bottom: 15%;
+    left: 15%;
+    animation-delay: 1.5s;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Why Choose Section */
+.why-choose-ads {
+    padding: 5rem 5rem;
+    margin: 5rem 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.why-choose-ads h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--color-heading);
+    margin-bottom: 3rem;
+    line-height: 1.2;
+}
+
+.benefits-grid {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    align-items: center;
+    margin-top: 3rem;
+    width: 80%;
+}
+
+/* Card Flip Animation */
+.benefit-card, .industry-item {
+    perspective: 1000px;
+    height: 300px;
+    width: 20vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-inner {
+    /* position: relative; */
+    width: 75%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+}
+
+.benefit-card:hover .card-inner,
+.industry-item:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 20px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    left: -33px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-front {
+    background: white;
+    border: 1px solid #E5E7EB;
+}
+
+.card-back {
+    background: var(--color-primary);
+    color: white;
+    transform: rotateY(180deg);
+}
+
+.benefit-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--color-primary), #FF8A65);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    color: white;
+    font-size: 2rem;
+}
+
+.benefit-card h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--color-heading);
+    margin-bottom: 1rem;
+    line-height: 1.3;
+}
+
+.benefit-card p {
+    font-size: 0.95rem;
+    color: #626C71;
+    line-height: 1.5;
+}
+
+.card-back h4 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: white;
+}
+
+.card-back ul {
+    list-style: none;
+    padding: 0;
+}
+
+.card-back ul li {
+    padding: 0.5rem 0;
+    font-size: 1rem;
+    color: white;
+    opacity: 0.9;
+}
+
+.card-back ul li:before {
+    content: "✓ ";
+    font-weight: bold;
+    margin-right: 0.5rem;
+}
+
+/* Ad Formats Section */
+.ad-formats {
+    background:url("advertisors/360\ Monetization\ Solutions.png");
+    padding-top: 5rem;
+    padding-left: 5rem;
+    margin-right: -85px;
+    background-size: cover;
+    color: white;
+}
+
+.ad-formats-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.formats-text h2 {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: white;
+}
+
+.format-option {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    backdrop-filter: blur(10px);
+}
+
+.format-option h4 {
+    font-size: 2.7rem;
+    font-weight: 200;
+    color: white;
+    margin: 0;
+}
+
+.formats-visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mobile-mockup img {
+    max-width: 100%;
+    /* border-radius: 25px; */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    padding-bottom: -2px;
+}
+
+/* Industries Section */
+.industries-section {
+    margin: 5rem 0;
+    padding: 5rem 5rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.industries-section h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--color-heading);
+    margin-bottom: 1rem;
+}
+
+.industries-section .subtitle {
+    font-size: 1.1rem;
+    color: #626C71;
+    margin-bottom: 3rem;
+}
+
+.industries-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 4rem;
+    margin-top: 3rem;
+    width: 80%;
+}
+
+.industry-item {
+    height: 200px;
+    width: 17vw;
+}
+
+.industry-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--color-primary), #FF8A65);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.industry-item h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--color-heading);
+}
+
+.industry-item .card-back p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+/* Traffic Volumes Section */
+.traffic-volumes {
+    background: url("advertisors/Rectangle\ 28.png");
+    padding: 5rem 5rem;
+    color: white;
+}
+
+.traffic-volumes h2 {
+    font-size: 4rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: white;
+}
+
+.traffic-table {
+    max-width: 600px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+}
+
+.table-header {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 1.5rem;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.table-row {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    padding: 1.2rem 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.table-row:last-child {
+    border-bottom: none;
+}
+
+.col-geo {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.col-impressions {
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+/* FAQ Section */
+.faq-section {
+    padding: 5rem 0;
+}
+
+.faq-section h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--color-heading);
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.faq-list {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background: white;
+    border: 1px solid #E5E7EB;
+    border-radius: 15px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    transition: all 0.3s;
+}
+
+.faq-item:hover {
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.faq-question {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.faq-question:hover {
+    background: #F9FAFB;
+}
+
+.faq-number {
+    background: var(--color-primary);
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    margin-right: 1rem;
+    flex-shrink: 0;
+}
+
+.faq-question h3 {
+    flex: 1;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--color-heading);
+    margin: 0;
+}
+
+.faq-question i {
+    color: #626C71;
+    transition: transform 0.3s;
+}
+
+.faq-item.active .faq-question i {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    padding: 0 1.5rem 1.5rem;
+    display: none;
+}
+
+.faq-item.active .faq-answer {
+    display: block;
+}
+
+.faq-answer p {
+    font-size: 1rem;
+    color: #626C71;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .hero-content,
+    .ad-formats-content {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        text-align: center;
+    }
+    
+    .benefits-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-label,
+    .hero-highlight {
+        font-size: 2rem;
+    }
+    
+    .why-choose-ads h2,
+    .industries-section h2,
+    .traffic-volumes h2,
+    .faq-section h2 {
+        font-size: 2rem;
+    }
+    
+    .benefits-grid,
+    .industries-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .benefit-card,
+    .industry-item {
+        height: 250px;
+    }
+    
+    .hero-illustration {
+        width: 250px;
+        height: 250px;
+    }
+    
+    .telegram-circle {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .floating-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .advertisers-hero {
+        padding: 2rem 0;
+    }
+    
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-label,
+    .hero-highlight {
+        font-size: 1.5rem;
+    }
+    
+    .why-choose-ads,
+    .industries-section,
+    .traffic-volumes,
+    .faq-section {
+        padding: 3rem 0;
+    }
+    
+    .ad-formats {
+        padding: 3rem 0;
+    }
+    
+    .formats-text h2 {
+        font-size: 1.8rem;
+    }
+    
+    .table-header,
+    .table-row {
+        padding: 1rem;
+    }
+    
+    .faq-question {
+        padding: 1rem;
+    }
+    
+    .faq-number {
+        width: 35px;
+        height: 35px;
+        font-size: 0.9rem;
+    }
+}
