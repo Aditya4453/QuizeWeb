@@ -29,9 +29,9 @@ body {
 }
 
 .hero-label {
-    color: #626C71;
-    font-size: 2.5rem;
-    font-weight: 600;
+    color: #151F4C;
+    font-size: 3rem;
+    font-weight: 300;
 }
 
 .hero-highlight {
@@ -159,7 +159,7 @@ body {
 }
 
 .why-choose-ads h2 {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     font-weight: 700;
     color: var(--color-heading);
     margin-bottom: 3rem;
@@ -241,7 +241,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 1.5rem;
+    margin: 1.5rem;
     color: white;
     font-size: 2rem;
 }
@@ -349,7 +349,7 @@ body {
 }
 
 .industries-section h2 {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     font-weight: 700;
     color: var(--color-heading);
     margin-bottom: 1rem;
@@ -458,7 +458,7 @@ body {
 }
 
 .faq-section h2 {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     font-weight: 700;
     color: var(--color-heading);
     text-align: center;
