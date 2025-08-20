@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Quizango | Karekaise Platform</title>
+    <link rel="stylesheet" href="contactus.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <!-- FontAwesome for placeholder icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mukta:wght@200;300;400;500;600;700;800&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Savate:ital,wght@0,200..900;1,200..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Tiny5&family=Yellowtail&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- =================== NAVIGATION =================== -->
+    <div id="navbar"></div>
+
+    <!-- =================== HERO SECTION =================== -->
+    <section class="hero ">
+        <div class="hero__content">
+            <h1>
+                <span class="hero__heading-1">REACH OUT</span>
+                <!-- <span class="hero__heading-2">WITHIN YOUR APP & WEBSITE</span> -->
+                <span class="hero__heading-3">ANYTIME</span>
+            </h1>
+            <p class="hero__desc">Get in touch with our team. Fill out the form below and we'll respond promptly to your
+                inquiry.</p>
+            <a href="#" class="btn btn--primary">CONTACT SALES</a>
+
+
+        </div>
+        <div class="hero__visual">
+            <img src="images/contactus.png" alt="" width="500" height="280">
+        </div>
+    </section>
+
+
+
+    <!-- =================== WHY CHOOSE US =================== -->
+    <section class="why-choose">
+        <div class="why-choose__container ">
+            <div class="why-choose__content">
+                <h2 class="section__heading">Our Headquarters</h2>
+                <p class="section__subheading">
+                    Find our location and contact details below.
+                </p>
+                <div class="contact-card">
+
+                    <!-- Address -->
+                    <div class="info-box">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="info-text">
+                            <h3>Address</h3>
+                            <p>531A Upper Cross Street<br>
+                                #04-95 Hong Lim Complex<br>
+                                Singapore 051531</p>
+                        </div>
+                    </div>
+
+                    <!-- Phone -->
+                    <div class="info-box">
+                        <i class="fas fa-phone"></i>
+                        <div class="info-text">
+                            <h3>Phone</h3>
+                            <p><a href="tel:+917738255666">+91-7738255666</a></p>
+                        </div>
+                    </div>
+
+                    <!-- Support -->
+                    <div class="info-box">
+                        <i class="fas fa-envelope"></i>
+                        <div class="info-text">
+                            <h3>Support</h3>
+                            <p><a href="mailto:support@quizangomedia.com">support@quizangomedia.com</a></p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div>
+                <img src="images/map.png" alt="">
+            </div>
+        </div>
+    </section>
+
+    <!-- =================== QUIZ CATEGORIES =================== -->
+    <!-- Contact Form -->
+    <section class="contact-form" id="contact">
+        <div class="container">
+            <h2>Let's Connect</h2>
+            <p class="section-subtitle">We're here to help and answer any questions you might have.</p>
+
+            <form class="contact-grid">
+                <!-- Row 1 -->
+                <div class="form-group">
+                    <label for="contact-name">Your Name *</label>
+                    <input type="text" id="contact-name" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="company-email">Company Email *</label>
+                    <input type="email" id="company-email" class="form-control" required>
+                </div>
+
+                <!-- Row 2 -->
+                <div class="form-group">
+                    <label for="website">Website *</label>
+                    <input type="url" id="website" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="ad-revenue">Current Ad Revenue *</label>
+                    <input type="text" id="ad-revenue" class="form-control" required>
+                </div>
+
+                <!-- Row 3 -->
+                <div class="form-group">
+                    <label for="contact-number">Contact Number</label>
+                    <input type="text" id="contact-number" class="form-control" placeholder="+91">
+                </div>
+                <div class="form-group">
+                    <label for="traffic-source">Select Primary Traffic Source</label>
+                    <select id="traffic-source" class="form-control">
+                        <option value="">Select an option</option>
+                        <option value="games">Games</option>
+                        <option value="entertainment">Entertainment</option>
+                        <option value="education">Education</option>
+                        <option value="news">News</option>
+                        <option value="ecommerce">E-commerce</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <!-- Full width row -->
+                <div class="form-group" style="grid-column: 1 / -1;">
+                    <label for="project-details">Tell Us About Your Project Or Inquiry</label>
+                    <textarea id="project-details" class="form-control" rows="5"></textarea>
+                </div>
+
+                <!-- Submit -->
+                <div class="form-actions" style="grid-column: 1 / -1;">
+                    <button type="submit" class="btn btn-primary btn-lg">SEND MESSAGE</button>
+                </div>
+            </form>
+
+        </div>
+    </section>
+
+    <!-- =================== FOOTER =================== -->
+    <div id="footer"></div>
+    <script src="js/components.js"></script>
+</body>
+
+</html>
