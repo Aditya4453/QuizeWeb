@@ -1,0 +1,96 @@
+:root {
+      --color-primary: #FA743E;
+      --color-primary-hover: #db5f27;
+      --color-heading: #151F4C;
+      --color-subtle: #7b8aa0;
+      --color-white: #fff;
+      --color-bg-soft: #FFF6F3;
+      --color-bg-grad: linear-gradient(135deg, #FFF6F3 0%, #f7e2ff 100%);
+      --card-radius: 1.5rem;
+      --container-maxwidth: 800px;
+    }
+    html { box-sizing: border-box; }
+    *, *:before, *:after { box-sizing: inherit; }
+    body {
+      font-family: "Outfit", sans-serif;
+      background: url("images/background.png");
+      color: var(--color-heading);
+      min-height: 100vh;
+      margin: 0;
+    }
+    .privacy-policy-page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      padding: 4rem 0 5rem 0;
+      width: 100%;
+    }
+    .container {
+      /* max-width: var(--container-maxwidth); */
+
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      width: 80%;
+    }
+    .section-heading {
+      font-size: 2.8rem;
+      font-weight: 400;
+      color: var(--color-heading);
+      text-align: center;
+      margin-bottom: 1rem;
+      letter-spacing: -0.8px;
+    }
+    .section-heading span{
+      color: #FA743E;
+      font-weight: 700;
+    }
+    .section-subtitle {
+      font-size: 1.13rem;
+      color: var(--color-subtle);
+      text-align: center;
+      margin-bottom: 2.5rem;
+      line-height: 1.6;
+    }
+    .privacy-card {
+      /* background: var(--color-white); */
+      border-radius: var(--card-radius);
+      /* box-shadow: 0 4px 30px 0 rgba(250, 116, 62, 0.13); */
+      padding: 2.5rem 2rem 2rem 2rem;
+      margin: 0 auto;
+      font-size: 1.09rem;
+      color: #151f4c;
+      line-height: 1.7;
+    }
+    .privacy-card h2 {
+      font-size: 2rem;
+      margin-top: 2.1em;
+      margin-bottom: 0.75em;
+      font-weight: 400;
+      color: #151F4C;
+    }
+    .privacy-card p, .privacy-card ul, .privacy-card li {
+      font-size: 1rem;
+      color: #151f4cbe;
+    }
+    .privacy-card ul {
+      margin-left: 1.3em;
+      margin-bottom: 1em;
+    }
+    .privacy-card a {
+      color: #151F4C;
+      text-decoration: underline;
+      transition: color 0.2s;
+    }
+    .privacy-card a:hover {
+      color: var(--color-primary-hover);
+    }
+    @media (max-width: 700px) {
+      .privacy-policy-page { padding: 2.2rem 0 3rem 0; }
+      .container { padding: 0 0.6rem; }
+      .privacy-card { padding: 1.3rem 0.7rem; font-size: 1rem; }
+      .section-heading { font-size: 2rem; }
+    }
+    @media (max-width: 400px) {
+      .section-heading { font-size: 1.3rem; }
+    }

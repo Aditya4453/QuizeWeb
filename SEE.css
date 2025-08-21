@@ -66,7 +66,7 @@
 }
 
 body {
-  font-family: var(--font-family-base);
+  font-family: "outfit",sans-serif;
   line-height: var(--line-height-normal);
   color: var(--color-text);
   background-image: url("images/background.png");
