@@ -261,7 +261,7 @@ a:hover {
   /* box-shadow: var(--shadow-sm); */
   transition: all var(--duration-normal) var(--ease-standard);
   text-align: center;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   height: 45vh;
   display: flex;
   flex-direction: column;
@@ -1017,6 +1017,7 @@ a:hover {
 }
 
 .flip-container {
+  background: none;
   perspective: 1200px;
   min-height: 280px;
   height: 36vh;

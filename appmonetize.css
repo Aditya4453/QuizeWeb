@@ -261,7 +261,7 @@ a:hover {
   /* box-shadow: var(--shadow-sm); */
   transition: all var(--duration-normal) var(--ease-standard);
   text-align: center;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   height: 45vh;
   display: flex;
   flex-direction: column;
@@ -1017,6 +1017,8 @@ a:hover {
 }
 
 .flip-container {
+  background: none;
+  border: none;
   perspective: 1200px;
   min-height: 280px;
   height: 36vh;
@@ -1031,6 +1033,7 @@ a:hover {
   position: relative;
   border-radius: var(--radius-lg);
   min-height: 240px;
+  
 }
 
 .flip-container:hover .flip-inner,
@@ -1068,7 +1071,7 @@ a:hover {
 /* Responsive adjustments */
 @media (max-width: 900px) {
   .features-grid { grid-template-columns: 1fr; }
-  .flip-container { height: auto; min-height: 180px;}
+  .flip-container { height: 30vh; min-height: 180px;}
   .flip-inner { min-height: 180px; }
 }
 @media (hover: none) and (pointer: coarse) {
