@@ -6,7 +6,7 @@
       --color-white: #fff;
       --color-bg-soft: #FFF6F3;
       --color-bg-grad: linear-gradient(135deg, #FFF6F3 0%, #f7e2ff 100%);
-      --card-radius: 1.5rem;
+      --card-radius: 15px;
       --container-maxwidth: 800px;
     }
     html { box-sizing: border-box; }

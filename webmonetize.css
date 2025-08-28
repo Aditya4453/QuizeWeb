@@ -10,7 +10,7 @@
   --color-background: #f5f5f5;
   --color-surface: #ffffff;
   --color-border: #e1e5e9;
-  
+
   /* Typography */
   --font-family-base: "Outfit", sans-serif;
   --font-weight-normal: 400;
@@ -20,7 +20,7 @@
   --line-height-tight: 1.2;
   --line-height-normal: 1.5;
   --letter-spacing-tight: -0.01em;
-  
+
   /* Spacing */
   --space-4: 4px;
   --space-8: 8px;
@@ -29,26 +29,26 @@
   --space-20: 20px;
   --space-24: 24px;
   --space-32: 32px;
-  
+
   /* Border Radius */
   --radius-sm: 6px;
   --radius-base: 8px;
   --radius-lg: 12px;
   --radius-full: 50%;
-  
+
   /* Shadows */
   --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.02);
   --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.04), 0 2px 4px -1px rgba(0, 0, 0, 0.02);
   --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.04), 0 4px 6px -2px rgba(0, 0, 0, 0.02);
-  
+
   /* Animation */
   --duration-fast: 150ms;
   --duration-normal: 250ms;
   --ease-standard: ease;
-  
+
   /* Layout */
   --container-xl: 1280px;
-  
+
   /* Key Benefits Section Colors */
   --color-panel-bg: #151F4C;
   --color-tab-bg: #fff;
@@ -84,7 +84,12 @@ img {
 }
 
 /* ========== TYPOGRAPHY ========== */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0;
   font-weight: var(--font-weight-semibold);
   line-height: var(--line-height-tight);
@@ -92,10 +97,21 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: var(--letter-spacing-tight);
 }
 
-h1 { font-size: 4rem; }
-h2 { font-size: 3rem; }
-h3 { font-size: 2rem; }
-h4 { font-size: 1.5rem; }
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
 
 p {
   margin: 0 0 var(--space-16) 0;
@@ -114,7 +130,7 @@ a:hover {
 
 /* ========== LAYOUT UTILITIES ========== */
 .container {
-  max-width: var(--container-xl);
+
   margin: 0 auto;
   padding: 0 var(--space-20);
 }
@@ -213,13 +229,34 @@ a:hover {
   border: 1px solid var(--color-border);
 }
 
-.icon-1 { top: 20%; right: 10%; animation-delay: 0s; }
-.icon-2 { bottom: 30%; right: 5%; animation-delay: 1s; }
-.icon-3 { top: 60%; left: 10%; animation-delay: 2s; }
+.icon-1 {
+  top: 20%;
+  right: 10%;
+  animation-delay: 0s;
+}
+
+.icon-2 {
+  bottom: 30%;
+  right: 5%;
+  animation-delay: 1s;
+}
+
+.icon-3 {
+  top: 60%;
+  left: 10%;
+  animation-delay: 2s;
+}
 
 @keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
 }
 
 /* ========== ACCOUNT PROTECTION SECTION ========== */
@@ -249,9 +286,14 @@ a:hover {
 
 .protection-features {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  align-items: center;
+  justify-content: center;
   gap: var(--space-32);
   margin-top: var(--space-32);
+  margin: auto;
+  width: 80vw;
+  max-width: 1200px;
 }
 
 .feature-card {
@@ -262,11 +304,12 @@ a:hover {
   transition: all var(--duration-normal) var(--ease-standard);
   text-align: center;
   /* border: 1px solid black; */
-  height: 45vh;
+  min-height: 400px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 100%;
 }
 
 .feature-card:hover {
@@ -383,15 +426,20 @@ a:hover {
 
 .features-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(266px, 1fr));
-  gap: var(--space-32);
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
   margin-top: var(--space-32);
+  width: 80vw;
+  margin: auto;
+  /* max-width: 1200px; */
 }
 
 .feature-item {
   background: var(--color-white);
   padding: var(--space-24);
-  height: 36vh;
+  min-height: 320px;
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-sm);
   transition: all var(--duration-normal) var(--ease-standard);
@@ -400,6 +448,7 @@ a:hover {
   align-items: center;
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 .feature-item:hover {
@@ -463,24 +512,25 @@ a:hover {
   width: 80%;
 }
 
-.benefit-panel.active { 
-  display: flex; 
+.benefit-panel.active {
+  display: flex;
 }
 
 @keyframes fadePanel {
-  0% { 
-    opacity: 0; 
+  0% {
+    opacity: 0;
     transform: translateY(12px);
   }
-  100% { 
-    opacity: 1; 
+
+  100% {
+    opacity: 1;
     transform: translateY(0);
   }
 }
 
 .benefit-logo {
-  width: 100px; 
-  height: 100px; 
+  width: 100px;
+  height: 100px;
   margin-bottom: 0.7em;
   object-fit: contain;
 }
@@ -497,8 +547,8 @@ a:hover {
   padding-left: 1.1em;
   color: var(--color-white);
   font-size: 1.04rem;
-  display: flex; 
-  flex-direction: column; 
+  display: flex;
+  flex-direction: column;
   gap: 0.33em;
 }
 
@@ -507,7 +557,7 @@ a:hover {
 }
 
 .benefit-panel p {
-  margin-bottom: 0.4em; 
+  margin-bottom: 0.4em;
   color: var(--color-text-light);
 }
 
@@ -521,7 +571,7 @@ a:hover {
 }
 
 .key-benefits__tabs h3 {
-  color: var(--color-text); 
+  color: var(--color-text);
   font-size: 4rem;
   font-weight: var(--font-weight-bold);
   margin-bottom: 1.4rem;
@@ -531,8 +581,8 @@ a:hover {
   list-style: none;
   margin: 0;
   padding: 0;
-  display: flex; 
-  flex-direction: column; 
+  display: flex;
+  flex-direction: column;
   gap: 0.45em;
   width: 80%;
 }
@@ -550,7 +600,7 @@ a:hover {
   outline: none;
   transition: background 0.19s, color 0.17s, border-color 0.2s;
   margin-bottom: 0.41em;
-  box-shadow: 0 1px 8px 0 rgba(190,168,140,0.06);
+  box-shadow: 0 1px 8px 0 rgba(190, 168, 140, 0.06);
   text-align: left;
   position: relative;
 }
@@ -560,7 +610,7 @@ a:hover {
   color: var(--color-tab-text-active);
   background: var(--color-tab-bg-active);
   border: 2px solid var(--color-primary);
-  box-shadow: 0 2px 16px 0 rgba(250,116,62,0.03);
+  box-shadow: 0 2px 16px 0 rgba(250, 116, 62, 0.03);
 }
 
 .benefits-tab:focus {
@@ -568,7 +618,7 @@ a:hover {
   border-color: var(--color-primary);
 }
 
-.benefits-tab:last-child { 
+.benefits-tab:last-child {
   margin-bottom: 0;
 }
 
@@ -603,15 +653,18 @@ a:hover {
 
 .testimonials {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: var(--space-32);
   margin-top: var(--space-32);
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .testimonial-card {
   background: var(--color-white);
-  height: 40vh;
-  width: 20vw;
+  min-height: 350px;
+  width: 100%;
   padding: var(--space-24);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-sm);
@@ -670,47 +723,49 @@ a:hover {
     gap: var(--space-32);
     padding: 0 5vw;
   }
-  .hero-content{
+
+  .hero-content {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
   }
+
   .hero-content h1 {
     font-size: 3.5rem;
   }
-  
+
   .hero-content p {
     width: 80%;
     text-align: center;
   }
-  
+
   .account-protection h2,
   .why-choose h2,
   .success-spotlight h2 {
     font-size: 4rem;
   }
-  
+
   .section-subtitle {
     font-size: 1.8rem;
   }
-  
+
   .products-section {
     flex-direction: column;
     text-align: center;
     gap: 3rem;
   }
-  
+
   .products-text {
     max-width: 80%;
   }
-  
+
   .key-benefits__container {
     flex-direction: column;
     gap: 2.3em;
   }
-  
-  .key-benefits__display, 
+
+  .key-benefits__display,
   .key-benefits__tabs {
     max-width: 100vw;
     min-width: 0;
@@ -718,7 +773,7 @@ a:hover {
     width: 100%;
     padding: 2rem;
   }
-  
+
   .key-benefits__tabs h3 {
     font-size: 3rem;
   }
@@ -730,98 +785,101 @@ a:hover {
     margin: 5rem 0;
     padding: var(--space-24) 0;
   }
-  
+
   .hero-container {
     padding: 0 var(--space-16);
     gap: var(--space-24);
   }
-  
+
   .hero-content h1 {
     font-size: 3rem;
     line-height: 1.1;
   }
-  
+
   .hero-content p {
     font-size: 1.2rem;
     width: 100%;
   }
-  
+
   .hero-image {
     order: -1;
   }
-  
+
   .floating-elements {
     display: none;
   }
-  
+
   .account-protection h2,
   .why-choose h2,
   .success-spotlight h2 {
     font-size: 3rem;
   }
-  
+
   .section-subtitle {
     font-size: 1.5rem;
   }
-  
+
   .protection-features,
   .features-grid {
     grid-template-columns: 1fr;
     gap: var(--space-24);
+    width: 90vw;
   }
-  
+
   .feature-card,
   .feature-item {
     height: auto;
-    min-height: 300px;
+    min-height: 280px;
     padding: var(--space-24);
+    width: 100%;
   }
-  
+
   .products-section {
     padding: 8vh 5vw;
   }
-  
+
   .products-text {
     max-width: 100%;
   }
-  
+
   .products-text h2 {
     font-size: 2.5rem;
   }
-  
+
   .products-text p {
     width: 100%;
     font-size: 18px;
   }
-  
+
   .product-btn {
     width: 100%;
   }
-  
+
   .product-btn span {
     font-size: 1.5rem;
   }
-  
+
   .testimonials {
     grid-template-columns: 1fr;
     gap: var(--space-24);
+    width: 90vw;
   }
-  
+
   .testimonial-card {
     width: 100%;
     height: auto;
-    min-height: 300px;
+    min-height: 280px;
   }
-  
+
   .testimonial-header {
     flex-direction: column;
     text-align: center;
   }
-  
+
   .key-benefits__tabs h3 {
     font-size: 2.5rem;
   }
-  
+
   .benefits-tablist {
     width: 100%;
   }
@@ -832,115 +890,117 @@ a:hover {
   .container {
     padding: 0 var(--space-16);
   }
-  
+
   .hero {
     margin: 3rem 0;
     padding: var(--space-20) 0;
   }
-  
+
   .hero-container {
     gap: var(--space-20);
   }
-  
+
   .hero-content h1 {
     font-size: 2.5rem;
   }
-  
+
   .hero-content p {
     font-size: 1rem;
   }
-  
+
   .cta-button {
     padding: var(--space-16) var(--space-24);
     font-size: 0.9rem;
     width: 100%;
     max-width: 280px;
   }
-  
+
   .account-protection,
   .why-choose,
   .success-spotlight {
     padding: 8vh 0;
   }
-  
+
   .account-protection h2,
   .why-choose h2,
   .success-spotlight h2 {
     font-size: 2.5rem;
     line-height: 1.2;
   }
-  
+
   .section-subtitle {
     font-size: 1.2rem;
     margin-bottom: var(--space-24);
   }
-  
+
   .success-spotlight p {
     font-size: 18px;
   }
-  
+
   .protection-features,
   .features-grid,
   .testimonials {
     gap: var(--space-20);
+    width: 95vw;
   }
-  
+
   .feature-card,
   .feature-item,
   .testimonial-card {
     padding: var(--space-20);
     min-height: 250px;
+    width: 100%;
   }
-  
+
   .feature-icon {
     width: 100px;
     height: 100px;
   }
-  
+
   .feature-item .feature-icon {
     width: 80px;
     height: 80px;
   }
-  
+
   .products-section {
     padding: 6vh 3vw;
   }
-  
+
   .products-text h2 {
     font-size: 2rem;
   }
-  
+
   .products-text p {
     font-size: 16px;
   }
-  
+
   .product-btn span {
     font-size: 1.2rem;
   }
-  
+
   .product-btn img {
     height: 60px;
     width: 70px;
     padding: 15px;
   }
-  
+
   .products-image img {
     width: 280px;
   }
-  
+
   .key-benefits__display {
     padding: 2rem;
   }
-  
+
   .key-benefits__tabs h3 {
     font-size: 2rem;
   }
-  
+
   .benefits-tab {
     font-size: 0.95rem;
     padding: 0.9em 1.1em;
   }
-  
+
   .benefit-panel h3 {
     font-size: 1.8rem;
   }
@@ -951,81 +1011,82 @@ a:hover {
   .container {
     padding: 0 var(--space-12);
   }
-  
+
   .hero-container {
     padding: 0 var(--space-12);
   }
-  
+
   .hero-content h1 {
     font-size: 2rem;
   }
-  
+
   .hero-content p {
     font-size: 0.9rem;
   }
-  
+
   .account-protection h2,
   .why-choose h2,
   .success-spotlight h2 {
     font-size: 2rem;
   }
-  
+
   .section-subtitle {
     font-size: 1rem;
   }
-  
+
   .success-spotlight p {
     font-size: 16px;
   }
-  
+
   .products-text h2 {
     font-size: 1.8rem;
   }
-  
+
   .products-text p {
     font-size: 14px;
   }
-  
+
   .product-btn span {
     font-size: 1rem;
   }
-  
+
   .feature-card h3,
   .feature-item h3 {
     font-size: 20px;
   }
-  
+
   .testimonial-info h4 {
     font-size: 24px;
   }
-  
+
   .key-benefits__tabs h3 {
     font-size: 1.8rem;
   }
-  
+
   .benefit-panel h3 {
     font-size: 1.5rem;
   }
 }
 
 /* FLIP CARD EFFECT for Why Choose section */
-.features-grid {
+/* .features-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(266px, 1fr));
   gap: var(--space-32);
   margin-top: var(--space-32);
-}
+} */
 
 .flip-container {
   background: none;
   perspective: 1200px;
   min-height: 280px;
-  height: 36vh;
+  height: 35vh;
   padding: 0;
+  width: 100%;
 }
 
 .flip-inner {
-  transition: transform 0.6s cubic-bezier(.4,2,.6,1);
+  transition: transform 0.6s cubic-bezier(.4, 2, .6, 1);
   transform-style: preserve-3d;
   width: 100%;
   height: 100%;
@@ -1039,7 +1100,8 @@ a:hover {
   transform: rotateY(180deg);
 }
 
-.flip-front, .flip-back {
+.flip-front,
+.flip-back {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -1060,7 +1122,7 @@ a:hover {
 }
 
 .flip-back {
-  background:#FFF0DA;
+  background: #FFF0DA;
   transform: rotateY(180deg);
   color: var(--color-primary);
   text-align: center;
@@ -1068,10 +1130,24 @@ a:hover {
 
 /* Responsive adjustments */
 @media (max-width: 900px) {
-  .features-grid { grid-template-columns: 1fr; }
-  .flip-container { height: auto; min-height: 180px;}
-  .flip-inner { min-height: 180px; }
+  .features-grid {
+    grid-template-columns: 1fr;
+    width: 90vw;
+  }
+
+  .flip-container {
+    height: 30vh;
+    min-height: 180px;
+    width: 100%;
+  }
+
+  .flip-inner {
+    min-height: 180px;
+  }
 }
+
 @media (hover: none) and (pointer: coarse) {
-  .flip-container:active .flip-inner { transform: rotateY(180deg); }
+  .flip-container:active .flip-inner {
+    transform: rotateY(180deg);
+  }
 }

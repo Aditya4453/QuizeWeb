@@ -402,6 +402,7 @@ a:hover {
   color: var(--color-white);
   margin-bottom: 12px;
   transition: 0.3s;
+  padding: 1rem;
   border: 1px solid #ccc;
   width: 60%;
   font-family: var(--font-family-base);
