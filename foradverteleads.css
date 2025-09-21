@@ -144,7 +144,7 @@ body {
 }
 
 .hero-visual img {
-    max-width: 100%;
+    max-width: 87%;
     height: auto;
     border-radius: 15px;
     /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); */
@@ -1105,9 +1105,11 @@ body {
         font-size: 1.8rem;
     }
     
-    .hero-label,
+    .hero-label{
+        font-size: 5rem;
+    }
     .hero-highlight {
-        font-size: 1.3rem;
+        font-size: 1.5rem;
     }
     
     .hero-text p {
@@ -1137,8 +1139,8 @@ body {
     }
     
     .benefit-icon {
-        width: 45px;
-        height: 45px;
+        width: 100px;
+        height: 100px;
         font-size: 1.1rem;
     }
     
@@ -1188,8 +1190,8 @@ body {
     }
     
     .industry-icon {
-        width: 35px;
-        height: 35px;
+        width: 100px;
+        height: 100px;
         font-size: 0.9rem;
     }
     

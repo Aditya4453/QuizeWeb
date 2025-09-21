@@ -770,8 +770,8 @@ a:hover {
   
   .feature-card,
   .feature-item {
-    height: auto;
-    min-height: 300px;
+    /* height: auto; */
+    /* min-height: 300px; */
     padding: var(--space-24);
   }
   
@@ -887,7 +887,7 @@ a:hover {
   .feature-item,
   .testimonial-card {
     padding: var(--space-20);
-    min-height: 250px;
+    /* min-height: 250px; */
   }
   
   .feature-icon {

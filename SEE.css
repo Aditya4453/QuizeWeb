@@ -258,8 +258,8 @@ a:hover {
 /* Flip card specific styles for protection-features */
 .protection-features .flip-container {
   perspective: 1200px;
-  min-height: 320px;
-  height: auto;
+  /* min-height: 320px; */
+  /* height: auto; */
   padding: 0;
 }
 
