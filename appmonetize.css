@@ -763,8 +763,8 @@ a:hover {
   }
   
   .hero-image {
-    height: 300px;
-    width: 313px;
+    height: 250px;
+    width: 275px;
     order: -1;
   }
   
@@ -1095,7 +1095,7 @@ a:hover {
 /* Responsive adjustments */
 @media (max-width: 900px) {
   .features-grid { grid-template-columns: 1fr; }
-  .flip-container { height: 30vh; min-height: 180px;}
+  .flip-container { height: 50vh; min-height: 180px;}
   .flip-inner { min-height: 180px; }
 }
 @media (hover: none) and (pointer: coarse) {
