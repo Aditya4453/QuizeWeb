@@ -67,7 +67,7 @@ body {
 /* Hero Section */
 .advertisers-hero {
     padding: 2rem 1rem;
-    min-height: 100vh;
+    height: 80vh;
     display: flex;
     align-items: center;
 }
@@ -89,21 +89,21 @@ body {
 
 .hero-label {
     color: #151F4C;
-    font-size: 2rem;
+    font-size: 4rem;
     font-weight: 300;
     display: block;
 }
 
 .hero-highlight {
     color: var(--color-primary);
-    font-size: 2rem;
-    font-weight: 800;
+    font-size: 4rem;
+    font-weight: 600;
     text-transform: uppercase;
     display: block;
 }
 
 .hero-text p {
-    font-size: 1rem;
+    font-size: 1.5rem;
     color: #626C71;
     margin-bottom: 2rem;
     line-height: 1.6;
@@ -348,6 +348,7 @@ body {
 }
 
 .format-option h4 {
+    /* font-size: 3rem; */
     font-size: 1.8rem;
     font-weight: 200;
     color: white;
@@ -364,14 +365,14 @@ body {
 .mobile-mockup img {
     max-width: 100%;
     height: auto;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    /* box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3); */
     border-radius: 15px;
     transition: transform 0.3s ease;
 }
 
 .mobile-mockup img:hover {
     transform: scale(1.02);
-    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+    /* box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4); */
 }
 
 /* Industries Section */
@@ -606,7 +607,7 @@ body {
 /* Mobile Styles (up to 767px) */
 @media (max-width: 767px) {
     .advertisers-hero {
-        padding: 2rem 1rem;
+        padding: 0
         min-height: auto;
     }
     
@@ -849,7 +850,7 @@ body {
     
     .ad-formats-content {
         grid-template-columns: 1fr 1fr;
-        gap: 3rem;
+        gap: 15rem;
     }
     
     .formats-text h2 {
@@ -971,7 +972,7 @@ body {
     }
     
     .format-option h4 {
-        font-size: 2.7rem;
+        font-size: 1.5rem;
     }
     
     .industries-section {
@@ -1032,7 +1033,16 @@ body {
         font-size: 2.5rem;
     }
 }
-
+@media (min-width: 1024px) {
+  body{
+    transform: scale(0.8);
+  margin: 0 auto;
+  transform-origin: top left;
+  width: 125.11%;    /* compensate for scale (1 / 0.9 ≈ 111%) */
+  margin-bottom: -74rem;
+  overflow-x: hidden; 
+  }
+}
 /* Large Desktop Styles */
 @media (min-width: 1200px) {
     .container {
@@ -1040,11 +1050,12 @@ body {
     }
     
     .advertisers-hero {
-        padding: 5rem 4rem;
+        padding: 0 4rem;
     }
     
     .why-choose-ads {
-        padding: 6rem 4rem;
+        /* margin-bottom: 2rem; */
+        padding: 0rem 4rem;
     }
     
     .ad-formats {
@@ -1069,6 +1080,7 @@ body {
     .container {
         max-width: 1400px;
         margin: 0 auto;
+        margin-bottom:4rem;
     }
     
     .hero-text h1 {
@@ -1084,6 +1096,7 @@ body {
     .industries-section h2,
     .faq-section h2 {
         font-size: 3.5rem;
+        font-weight: 500;
     }
     
     .formats-text h2 {

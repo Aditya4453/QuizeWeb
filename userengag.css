@@ -1068,7 +1068,7 @@ a:hover {
 /* Responsive adjustments */
 @media (max-width: 900px) {
   .features-grid { grid-template-columns: 1fr; }
-  .flip-container { height: auto; min-height: 180px;}
+  .flip-container { height: auto; min-height: 180px;box-shadow: 0px 0px 5px -0.95px black;}
   .flip-inner { min-height: 180px; }
 }
 @media (hover: none) and (pointer: coarse) {

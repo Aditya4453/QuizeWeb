@@ -88,7 +88,7 @@ img { max-width: 100%; height: auto; display: block; }
   /* background: var(--color-primary-hover); */
   transform: translateY(-2px) scale(1.04);
 }
-.btn--sm { font-size: 0.95rem; padding: 0.55em 1.6em; }
+.btn--sm { font-size: 1.5rem; padding: 0.55em 1.6em; }
 .btn-outline {
   font-size: 20px;
   font-weight: 600;
@@ -112,7 +112,7 @@ img { max-width: 100%; height: auto; display: block; }
 }
 .hero__content {
   flex: 1 1 320px;
-  max-width: 600px;
+  /* max-widt h: 600px; */
   margin-left: 16rem;
 }
 .hero__heading-1 {
@@ -121,7 +121,7 @@ img { max-width: 100%; height: auto; display: block; }
   /* letter-spacing: 0.01em; */
   font-size: 4rem;
   font-weight: 300;
-  margin-bottom: -20px;
+  margin-bottom: 0px;
 }
 .hero__heading-2 {
   display: block;
@@ -135,13 +135,13 @@ img { max-width: 100%; height: auto; display: block; }
 .hero__heading-3 {
   display: block;
   color: var(--color-primary);
-  font-size: 2.5rem;
-  font-weight: 800;
+  font-size: 4rem;
+  font-weight: 600;
   text-transform: uppercase;
 }
 .hero__desc {
   color: var(--color-text-secondary);
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   margin: 1rem 0 1.2rem 0;
 }
 .hero__visual {
@@ -168,18 +168,19 @@ img { max-width: 100%; height: auto; display: block; }
 }
 .section__heading {
   color: #151F4C;
-  font-size: 4rem;
-  font-weight: 700;
+  font-size: 3.5rem;
+  font-weight:  500;
   text-align: center;
-  margin: 0 0 0.3em 0;
-  letter-spacing: -0.01em;
+  margin: 0;
+  /* margin: 0 0 0.3em 0; */
+  /* letter-spacing: -0.01em; */
 }
 .features .section__subheading {
   text-align: center;
   width: 80%;
-  margin: 0 auto 2.1em auto;
+  /* margin: 0 auto 2.1em auto; */
   color: grey;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
 }
 .features__cards {
   display: grid;
@@ -237,7 +238,7 @@ img { max-width: 100%; height: auto; display: block; }
 =============================== */
 .why-choose {
   background: url(images/Gemini_Generated_Image_puioefpuioefpuio\ 1.png) center/cover no-repeat;
-  padding: 14.5rem 1.5rem;
+  padding: 21.5rem 1.5rem;
   margin: 4rem auto;
   color: white;
 }
@@ -248,7 +249,7 @@ img { max-width: 100%; height: auto; display: block; }
   justify-content: space-between;
   flex-wrap: wrap;
   max-width: var(--container-xl);
-  margin: 0 auto;
+  margin: 0 10rem;
 }
 .why-choose__content {
   flex: 1 1 340px;
@@ -258,7 +259,8 @@ img { max-width: 100%; height: auto; display: block; }
 .why-choose__content h2 {
   text-align: left;
   color: white;
-  font-size: 3rem;
+  font-size: 3.5rem;
+  font-weight: 500;
   margin: 0 0 0.5rem 0;
 }
 .section__subheading {
@@ -315,11 +317,14 @@ img { max-width: 100%; height: auto; display: block; }
   justify-content: center;
 }
 .contact-form h2 {
-  font-size: 3rem;
-  font-weight: 700;
+  font-size: 3.5rem;
+  font-weight: 500;
   color: var(--color-text);
   text-align: center;
   margin-bottom: 1rem;
+}
+.section-subtitle{
+  font-size: 1.5rem;
 }
 .contact-grid {
   display: grid;
@@ -381,6 +386,16 @@ img { max-width: 100%; height: auto; display: block; }
 /* >= 1280 context tweaks */
 @media (min-width: 1280px) {
   .hero { margin: 6rem auto; }
+}
+@media (min-width: 1024px) {
+  body{
+    transform: scale(0.8);
+  margin: 0 auto;
+  transform-origin: top left;
+  width: 125.11%;    /* compensate for scale (1 / 0.9 ≈ 111%) */
+  margin-bottom: -74rem;
+  overflow-x: hidden; 
+  }
 }
 /* Desktop to tablet (<= 1024) */
 @media (max-width: 1024px) {

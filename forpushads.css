@@ -31,6 +31,11 @@ body {
     margin: 0 auto;
     padding: 0 20px;
 }
+.pushads {
+    max-width: none;
+    margin: 0 auto;
+    padding: 0 20px;
+}
 
 /* Hero Section */
 .advertisers-hero {
@@ -57,21 +62,21 @@ body {
 
 .hero-label {
     color: #151F4C;
-    font-size: 2rem;
+    font-size: 4rem;
     font-weight: 300;
     display: block;
 }
 
 .hero-highlight {
     color: var(--color-primary);
-    font-size: 2rem;
-    font-weight: 800;
+    font-size: 4rem;
+    font-weight: 6  00;
     text-transform: uppercase;
     display: block;
 }
 
 .hero-text p {
-    font-size: 1rem;
+    font-size: 1.5rem;
     color: #626C71;
     margin-bottom: 2rem;
     line-height: 1.6;
@@ -129,7 +134,7 @@ body {
 
 .why-choose-ads h2 {
     font-size: 2rem;
-    font-weight: 700;
+    font-weight: 7=500;
     color: var(--color-heading);
     margin-bottom: 2rem;
     line-height: 1.2;
@@ -262,11 +267,16 @@ body {
     color: white;
     margin: 0;
 }
-
+.adformatswdth{
+    max-width: none;
+}
 .ad-formats-content {
-    display: grid;
+    margin: 0 auto;
+    display: flex;
     grid-template-columns: 1fr;
     gap: 2rem;
+    justify-content: space-between;
+    width: 80vw;
     align-items: center;
 }
 
@@ -304,7 +314,7 @@ body {
 .mobile-mockup img {
     max-width: 100%;
     height: auto;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    /* box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3); */
 }
 
 /* Industries Section */
@@ -617,7 +627,16 @@ body {
         padding: 0 1.5rem 1.5rem;
     }
 }
-
+@media (min-width: 1024px) {
+  body{
+    transform: scale(0.8);
+  margin: 0 auto;
+  transform-origin: top left;
+  width: 125.11%;    /* compensate for scale (1 / 0.9 ≈ 111%) */
+  margin-bottom: -74rem;
+  overflow-x: hidden; 
+  }
+}
 /* Desktop Styles */
 @media (min-width: 1024px) {
     .advertisers-hero {
@@ -638,7 +657,7 @@ body {
     }
     
     .hero-text p {
-        font-size: 1.1rem;
+        font-size: 1.5rem;
     }
     
     .why-choose-ads {
@@ -812,6 +831,7 @@ body {
     .industries-section h2,
     .faq-section h2 {
         font-size: 3.5rem;
+        font-weight: 500;
     }
     
     .formats-text h2 {

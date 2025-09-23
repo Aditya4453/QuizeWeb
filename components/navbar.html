@@ -28,13 +28,13 @@
     }
 
     .nav-container {
-        max-width: var(--container-xl);
+        /* max-width: var(--container-xl); */
         margin: 0 auto;
         display: flex;
         justify-content: space-between;
         align-items: center;
         position: relative;
-        width: 100%;
+        width: 80%;
     }
 
     /* Logo */
@@ -58,7 +58,9 @@
         padding: 0;
         align-items: center;
     }
-
+    .dropdown a{
+        font-size: 1rem;
+    }
     .nav-menu a {
         text-decoration: none;
         color: var(--color-text);
@@ -141,6 +143,7 @@
         display: flex;
         align-items: center;
         gap: 4px;
+        font-size: 1.3rem;
         padding-right: 1rem;
     }
 
@@ -457,7 +460,9 @@
             width: 22px;
             height: 2px;
         }
-
+        .nav-container{
+            width: 100%;
+        }
         .nav-menu {
             padding: 70px 1rem 1rem;
         }
@@ -521,7 +526,7 @@
         </button>
         
         <ul class="nav-menu" id="nav-menu" role="menubar">
-            <li role="none"><a href="./index.html" role="menuitem">Home</a></li>
+            <li class="dropdown" role="none"><a href="./index.html" role="menuitem">Home</a></li>
             
             <li class="dropdown" role="none">
                 <a href="#" role="menuitem" aria-haspopup="true" aria-expanded="false">Publishers</a>
@@ -552,8 +557,8 @@
                 </ul>
             </li>
             
-            <li role="none"><a href="#blog" role="menuitem">Blog</a></li>
-            <li role="none"><a href="./contactus.html" role="menuitem">Contact Us</a></li>
+            <li class="dropdown" role="none"><a href="#blog" role="menuitem">Blog</a></li>
+            <li class="dropdown" role="none"><a href="./contactus.html" role="menuitem">Contact Us</a></li>
         </ul>
     </nav>
     <div class="nav-overlay" id="nav-overlay" aria-hidden="true"></div>

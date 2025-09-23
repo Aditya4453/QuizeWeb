@@ -40,7 +40,16 @@
       text-align: center;
       margin-bottom: 1rem;
       letter-spacing: -0.8px;
-    }
+    }@media (min-width: 1024px) {
+  body{
+    transform: scale(0.8);
+  margin: 0 auto;
+  transform-origin: top left;
+  width: 125.11%;    /* compensate for scale (1 / 0.9 ≈ 111%) */
+  margin-bottom: -74rem;
+  overflow-x: hidden; 
+  }
+}
     .section-heading span{
       color: #FA743E;
       font-weight: 700;

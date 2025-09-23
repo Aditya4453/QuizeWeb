@@ -66,6 +66,7 @@
 }
 
 body {
+  
   font-family: var(--font-family-base);
   line-height: var(--line-height-normal);
   color: var(--color-text);
@@ -130,11 +131,12 @@ a:hover {
 .hero-container {
   width: 100%;
   margin: 0 auto;
-  padding: 0 10vw;
-  display: grid;
+  padding: 0 12vw;
+  display: flex;
   grid-template-columns: 1.5fr 1fr;
   gap: var(--space-32);
   align-items: center;
+  justify-content: center;
 }
 
 .hero-content h1 {
@@ -230,15 +232,15 @@ a:hover {
 }
 
 .account-protection h2 {
-  font-size: 5rem;
-  font-weight: var(--font-weight-bold);
+  font-size: 3.5rem;
+  font-weight: 500;
   margin-bottom: var(--space-20);
   color: var(--color-text);
   letter-spacing: var(--letter-spacing-tight);
 }
 
 .section-subtitle {
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: var(--color-text-secondary);
   margin-bottom: var(--space-32);
   max-width: 900px;
@@ -262,6 +264,7 @@ a:hover {
   transition: all var(--duration-normal) var(--ease-standard);
   text-align: center;
   height: 45vh;
+  gap: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -279,7 +282,7 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto var(--space-24);
+  /* margin: 0 auto var(--space-24); */
 }
 
 .feature-card h3 {
@@ -373,8 +376,8 @@ a:hover {
 }
 
 .why-choose h2 {
-  font-size: 4rem;
-  font-weight: var(--font-weight-bold);
+  font-size: 3.5rem;
+  font-weight: 500;
   margin-bottom: var(--space-20);
   color: var(--color-text);
   letter-spacing: var(--letter-spacing-tight);
@@ -589,8 +592,8 @@ a:hover {
 }
 
 .success-spotlight h2 {
-  font-size: 4rem;
-  font-weight: var(--font-weight-bold);
+  font-size: 3.5rem;
+  font-weight: 500;
   margin-bottom: var(--space-20);
   color: var(--color-text);
   letter-spacing: var(--letter-spacing-tight);
@@ -664,6 +667,7 @@ a:hover {
 /* Tablet Styles (768px - 1024px) */
 @media (max-width: 1024px) {
   .hero-container {
+    display: grid;
     grid-template-columns: 1fr;
     text-align: center;
     gap: var(--space-32);
@@ -687,7 +691,7 @@ a:hover {
   .account-protection h2,
   .why-choose h2,
   .success-spotlight h2 {
-    font-size: 4rem;
+    font-size: 3.5rem;
   }
   
   .section-subtitle {
@@ -719,6 +723,16 @@ a:hover {
   
   .key-benefits__tabs h3 {
     font-size: 3rem;
+  }
+}
+@media (min-width: 1024px) {
+  body{
+    transform: scale(0.8);
+  margin: 0 auto;
+  transform-origin: top left;
+  width: 125.11%;    /* compensate for scale (1 / 0.9 ≈ 111%) */
+  margin-bottom: -74rem;
+  overflow-x: hidden; 
   }
 }
 
@@ -887,6 +901,7 @@ a:hover {
   .feature-item,
   .testimonial-card {
     padding: var(--space-20);
+    height: 55vh;
     /* min-height: 250px; */
   }
   
