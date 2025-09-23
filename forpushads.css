@@ -114,6 +114,8 @@ body {
     align-items: center;
     position: relative;
     margin-top: 2rem;
+    height: 400px;
+    width: 600px;
 }
 
 .hero-visual img {
@@ -298,8 +300,8 @@ body {
 }
 
 .format-option h4 {
-    font-size: 1.8rem;
-    font-weight: 200;
+    font-size: 1rem;
+    font-weight: 300;
     color: white;
     margin: 0;
     text-align: center;
@@ -644,7 +646,7 @@ body {
     }
     
     .hero-content {
-        gap: 4rem;
+        gap: 20rem;
     }
     
     .hero-text h1 {
@@ -710,7 +712,7 @@ body {
     }
     
     .format-option h4 {
-        font-size: 2.7rem;
+        font-size: 2rem;
     }
     
     .industries-section {
@@ -824,7 +826,7 @@ body {
     
     .hero-label,
     .hero-highlight {
-        font-size: 3rem;
+        font-size: 4rem;
     }
     
     .why-choose-ads h2,

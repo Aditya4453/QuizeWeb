@@ -972,7 +972,8 @@ body {
     }
     
     .format-option h4 {
-        font-size: 1.5rem;
+        font-size: 2rem;
+        font-weight: 400;
     }
     
     .industries-section {
@@ -1039,7 +1040,7 @@ body {
   margin: 0 auto;
   transform-origin: top left;
   width: 125.11%;    /* compensate for scale (1 / 0.9 ≈ 111%) */
-  margin-bottom: -74rem;
+  margin-bottom: -75rem;
   overflow-x: hidden; 
   }
 }
@@ -1089,7 +1090,7 @@ body {
     
     .hero-label,
     .hero-highlight {
-        font-size: 3rem;
+        font-size: 4rem;
     }
     
     .why-choose-ads h2,
