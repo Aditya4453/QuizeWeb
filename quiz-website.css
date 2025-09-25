@@ -480,8 +480,9 @@ img { max-width: 100%; height: auto; display: block; }
     align-items: center;
     text-align: center;
   }
-  .hero__heading-3 { font-size: 2rem; }
-  .hero__heading-1 { font-size: 4rem; }
+  .hero__heading-3 { font-size: 3rem; }
+  .hero__heading-1 { font-size: 3rem; }
+  .hero__desc{ font-size: 1.3rem;}
 }
 /* Micro (<= 420) */
 @media (max-width: 420px) {
@@ -492,8 +493,9 @@ img { max-width: 100%; height: auto; display: block; }
     text-align: center;
   }
   html { font-size: 15px; }
-  .container { padding: 0 0.5rem; }
+  .container { padding: 0 0.5rem; display: flex;margin: 0; flex-direction: column;}
   .section__heading { font-size: 3rem; }
   .hero__heading-2 { font-size: 1.35rem; }
+
   /* .hero__heading-3 { font-size: 1.09rem; } */
 }
