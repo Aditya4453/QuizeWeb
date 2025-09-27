@@ -66,7 +66,6 @@
 }
 
 body {
-  
   font-family: var(--font-family-base);
   line-height: var(--line-height-normal);
   color: var(--color-text);
@@ -263,12 +262,16 @@ a:hover {
   box-shadow: var(--shadow-sm);
   transition: all var(--duration-normal) var(--ease-standard);
   text-align: center;
-  height: 45vh;
+  height: auto;
+  min-height: 400px;
   gap: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
+  word-wrap: break-word;
+  hyphens: auto;
 }
 
 .feature-card:hover {
@@ -277,8 +280,8 @@ a:hover {
 }
 
 .feature-icon {
-  width: 140px;
-  height: 140px;
+  width: 120px;
+  height: 120px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -296,6 +299,8 @@ a:hover {
   color: var(--color-text);
   line-height: var(--line-height-normal);
   font-size: 1rem;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 /* ========== PRODUCTS SECTION ========== */
@@ -343,7 +348,7 @@ a:hover {
 .product-btn img {
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
-  height: 80px;
+  height: 100px;
   width: 90px;
   padding: 20px;
   margin-right: 10px;
@@ -393,15 +398,20 @@ a:hover {
 .feature-item {
   background: var(--color-white);
   padding: var(--space-24);
-  height: 36vh;
+  height: auto;
+  min-height: 300px;
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-sm);
   transition: all var(--duration-normal) var(--ease-standard);
   text-align: center;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   align-items: center;
   display: flex;
   flex-direction: column;
+  gap: var(--space-16);
+  overflow: hidden;
+  word-wrap: break-word;
+  hyphens: auto;
 }
 
 .feature-item:hover {
@@ -423,6 +433,11 @@ a:hover {
   font-weight: var(--font-weight-semibold);
   margin-bottom: var(--space-12);
   color: var(--color-text);
+}
+
+.feature-item p {
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 /* ========== KEY BENEFITS SECTION ========== */
@@ -449,7 +464,8 @@ a:hover {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 350px;
+  min-height: 400px;
+  height: auto;
   position: relative;
   transition: box-shadow 0.29s;
 }
@@ -461,7 +477,8 @@ a:hover {
   align-items: flex-start;
   gap: 1.35em;
   animation: fadePanel 0.35s;
-  height: 50vh;
+  height: auto;
+  min-height: 350px;
   width: 80%;
 }
 
@@ -612,7 +629,8 @@ a:hover {
 
 .testimonial-card {
   background: var(--color-white);
-  height: 40vh;
+  height: auto;
+  min-height: 350px;
   width: 20vw;
   padding: var(--space-24);
   border-radius: var(--radius-lg);
@@ -621,8 +639,12 @@ a:hover {
   text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   align-items: center;
+  gap: var(--space-12);
+  overflow: hidden;
+  word-wrap: break-word;
+  hyphens: auto;
 }
 
 .testimonial-card:hover {
@@ -660,9 +682,100 @@ a:hover {
   color: #141E4B;
   line-height: var(--line-height-normal);
   font-size: 15px;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+/* Better spacing for card content */
+.feature-card > *:not(:last-child),
+.feature-item > *:not(:last-child) {
+  margin-bottom: var(--space-16);
+}
+
+.testimonial-card > *:not(:last-child) {
+  margin-bottom: var(--space-12);
 }
 
 /* ========== RESPONSIVE DESIGN ========== */
+
+/* Height-based media queries for better card handling */
+@media (max-height: 972px) {
+  .feature-card {
+    min-height: 350px;
+  }
+  
+  .feature-item {
+    min-height: 280px;
+  }
+  
+  .testimonial-card {
+    min-height: 320px;
+  }
+  
+  .benefit-panel {
+    min-height: 320px;
+  }
+  
+  .key-benefits__display {
+    min-height: 350px;
+  }
+}
+
+@media (max-height: 800px) {
+  .feature-card {
+    min-height: 320px;
+    padding: var(--space-20);
+  }
+  
+  .feature-item {
+    min-height: 260px;
+    padding: var(--space-20);
+  }
+  
+  .testimonial-card {
+    min-height: 300px;
+  }
+  
+  .benefit-panel {
+    min-height: 300px;
+  }
+  
+  .key-benefits__display {
+    min-height: 320px;
+    padding: 2rem;
+  }
+}
+
+@media (max-height: 600px) {
+  .feature-card,
+  .feature-item,
+  .testimonial-card {
+    min-height: auto;
+    padding: var(--space-16);
+  }
+  
+  .benefit-panel {
+    min-height: auto;
+  }
+  
+  .key-benefits__display {
+    min-height: auto;
+    padding: 1.5rem;
+  }
+  
+  .feature-card h3,
+  .feature-item h3 {
+    font-size: 22px;
+  }
+  
+  .testimonial-info h4 {
+    font-size: 26px;
+  }
+  
+  .benefit-panel h3 {
+    font-size: 1.9rem;
+  }
+}
 
 /* Tablet Styles (768px - 1024px) */
 @media (max-width: 1024px) {
@@ -725,6 +838,7 @@ a:hover {
     font-size: 3rem;
   }
 }
+
 @media (min-width: 1024px) {
   body{
     transform: scale(0.8);
@@ -784,8 +898,7 @@ a:hover {
   
   .feature-card,
   .feature-item {
-    /* height: auto; */
-    /* min-height: 300px; */
+    min-height: 280px;
     padding: var(--space-24);
   }
   
@@ -821,8 +934,7 @@ a:hover {
   
   .testimonial-card {
     width: 100%;
-    height: auto;
-    min-height: 300px;
+    min-height: 280px;
   }
   
   .testimonial-header {
@@ -901,8 +1013,7 @@ a:hover {
   .feature-item,
   .testimonial-card {
     padding: var(--space-20);
-    height: 55vh;
-    /* min-height: 250px; */
+    min-height: 250px;
   }
   
   .feature-icon {
