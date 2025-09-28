@@ -324,35 +324,6 @@ a:hover {
   margin: 0;
 }
 
-.feature-card {
-  /* background: var(--color-white); */
-  padding: 5rem 5rem;
-  border-radius: var(--radius-lg);
-  /* box-shadow: var(--shadow-sm); */
-  transition: all var(--duration-normal) var(--ease-standard);
-  text-align: center;
-  /* border: 1px solid black; */
-  height: 40vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.feature-card:hover {
-  transform: translateY(-5px);
-  /* box-shadow: var(--shadow-lg); */
-}
-
-.feature-icon {
-  width: 140px;
-  height: 140px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto var(--space-24);
-}
-
 .feature-card h3 {
   font-size: 25px;
   font-weight: var(--font-weight-semibold);
@@ -442,6 +413,13 @@ a:hover {
 .why-choose {
   padding: 15vh 0;
   text-align: center;
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 5vh auto;
+  padding: var(--space-32) 0;
+  text-align: center;
 }
 
 .why-choose h2 {
@@ -452,12 +430,6 @@ a:hover {
   letter-spacing: var(--letter-spacing-tight);
 }
 
-.features-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(267px, 1fr));
-  gap: var(--space-32);
-  margin-top: var(--space-32);
-}
 
 .feature-item {
   background: var(--color-white);
@@ -895,7 +867,7 @@ a:hover {
     gap: var(--space-24);
   }
   
-  .features-grid,
+
   .features-d {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: var(--space-24);
@@ -905,11 +877,7 @@ a:hover {
     height: 35vh;
     min-height: 260px;
   }
-  
-  .flipy {
-    height: 30vh;
-    min-height: 240px;
-  }
+
 }
 
 /* Mobile Landscape (481px - 768px) */
@@ -974,7 +942,7 @@ a:hover {
     gap: var(--space-20);
   }
   
-  .features-grid,
+
   .features-d {
     grid-template-columns: 1fr;
     gap: var(--space-20);
@@ -985,25 +953,15 @@ a:hover {
     min-height: 220px;
   }
   
-  .flipy {
-    height: auto;
-    min-height: 200px;
-  }
+
   
   .flip-inner {
     min-height: 200px;
   }
   
-  .feature-card {
-    height: auto;
-    min-height: 280px;
-    padding: var(--space-20);
-  }
+
   
-  .feature-icon {
-    width: 120px;
-    height: 120px;
-  }
+
   
   .feature-card h3 {
     font-size: 22px;
@@ -1303,7 +1261,7 @@ a:hover {
   }
   
   /* Features Grid */
-  .features-grid,
+ 
   .features-d {
     display: flex;
     flex-direction: column;
@@ -1313,38 +1271,9 @@ a:hover {
     width: 100%;
   }
   
-  .flip-container,
-  .flipy {
-    width: 100%;
-    max-width: 320px; /* Constrain width */
-    height: auto;
-    min-height: 240px; /* Reasonable height */
-    margin: 0 auto;
-  }
+
   
-  .flip-inner {
-    min-height: 240px;
-    width: 100%;
-  }
-  
-  .feature-card {
-    height: auto;
-    min-height: 240px;
-    padding: 1.2rem; /* Better padding */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .feature-icon {
-    width: 90px; /* Manageable icon size */
-    height: 90px;
-    margin-bottom: 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+
   
   .feature-card h3 {
     font-size: 1.1rem; /* Readable size */
@@ -1360,33 +1289,7 @@ a:hover {
     margin: 0;
   }
   
-  /* Flip card backs */
-  .flip-front,
-  .flip-back {
-    padding: 1.2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .flip-back {
-    text-align: center;
-  }
-  
-  .flip-back h4 {
-    font-size: 1.1rem;
-    margin-bottom: 0.8rem;
-    text-align: center;
-  }
-  
-  .flip-back p {
-    font-size: 0.9rem;
-    text-align: center;
-    line-height: 1.4;
-    margin: 0;
-  }
-  
+
   /* Floating elements - hide on mobile */
   .floating-elements {
     display: none;
@@ -1515,20 +1418,8 @@ a:hover {
     max-width: 280px;
     min-height: 220px;
   }
-  
-  .flip-inner {
-    min-height: 220px;
-  }
-  
-  .feature-card {
-    min-height: 220px;
-    padding: 1rem;
-  }
-  
-  .feature-icon {
-    width: 80px;
-    height: 80px;
-  }
+
+
   
   .feature-card h3 {
     font-size: 1rem;
@@ -1642,7 +1533,7 @@ a:hover {
     gap: var(--space-12);
   }
   
-  .features-grid,
+ 
   .features-d {
     grid-template-columns: 1fr;
     gap: var(--space-12);
@@ -1723,18 +1614,6 @@ a:hover {
     padding: 6vh 0;
   }
   
-  .flip-front,
-  .flip-back {
-    padding: var(--space-12);
-  }
-  
-  .flip-back h4 {
-    font-size: 16px;
-  }
-  
-  .flip-back p {
-    font-size: 0.85rem;
-  }
 }
 
 /* Ultra Small Mobile (up to 240px) */
@@ -1775,15 +1654,7 @@ a:hover {
     font-size: 0.9rem;
   }
   
-  .feature-card {
-    min-height: 180px;
-    padding: var(--space-8);
-  }
-  
-  .feature-icon {
-    width: 70px;
-    height: 70px;
-  }
+
   
   .feature-card h3 {
     font-size: 16px;
@@ -1817,12 +1688,7 @@ a:hover {
 }
 
 /* FLIP CARD EFFECT for Why Choose section */
-.features-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(267px, 1fr));
-  gap: var(--space-32);
-  margin-top: var(--space-32);
-}
+
 .features-d {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(266px, 1fr));
@@ -1830,11 +1696,6 @@ a:hover {
   margin-top: var(--space-32);
 }
 
-.flip-container {
-  perspective: 1200px;
-  
-  padding: 0;
-}
 .flipy {
   perspective: 1200px;
   min-height: 280px;
@@ -1842,48 +1703,9 @@ a:hover {
   padding: 0;
 }
 
-.flip-inner {
-  transition: transform 0.6s cubic-bezier(.4,2,.6,1);
-  transform-style: preserve-3d;
-  width: 100%;
-  height: 100%;
-  position: relative;
-  border-radius: var(--radius-lg);
-  min-height: 300px;
-}
 
-.flip-container:hover .flip-inner,
-.flip-container:focus-within .flip-inner {
-  transform: rotateY(180deg);
-}
 
-.flip-front, .flip-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  padding: var(--space-20);
-  background: var(--color-white);
-  border-radius: var(--radius-lg);
-  /* box-shadow: var(--shadow-sm); */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-}
 
-.flip-front .feature-icon {
-  font-size: 50px;
-  margin-bottom: var(--space-16);
-}
-
-.flip-back {
-  background:#FFF0DA;
-  transform: rotateY(180deg);
-  color: var(--color-primary);
-  text-align: center;
-}
 
 /* Responsive adjustments for flip cards */
 @media (max-width: 900px) {
@@ -1907,10 +1729,7 @@ a:hover {
     height: auto;
     min-height: 200px;
   }
-  
-  .flip-inner { 
-    /* min-height: 220px;  */
-  }
+
   
   /* Protection features flip cards responsive */
   .protection-features .flip-container { 
@@ -1918,10 +1737,7 @@ a:hover {
     min-height: 220px;
   }
   
-  .protection-features .flip-inner { 
-    /* min-height: 220px;  */
-  }
-  
+
   .protection-features .flip-front,
   .protection-features .flip-back {
     padding: var(--space-16);
@@ -1937,30 +1753,16 @@ a:hover {
 }
 
 @media (max-width: 600px) {
-  .flip-container {
-    /* min-height: 200px; */
-  }
+
   
   .flipy {
     min-height: 180px;
   }
   
-  .flip-inner {
-    /* min-height: 200px; */
-  }
+
+
   
-  .flip-front,
-  .flip-back {
-    padding: var(--space-14);
-  }
-  
-  .flip-back h4 {
-    font-size: 15px;
-  }
-  
-  .flip-back p {
-    font-size: 0.8rem;
-  }
+
   
   .protection-features .flip-container {
     min-height: 200px;

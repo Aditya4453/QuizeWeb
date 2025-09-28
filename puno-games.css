@@ -411,7 +411,8 @@ img { max-width: 100%; height: auto; display: block; }
 @media (min-width: 1024px) {
   body{
     transform: scale(0.8);
-  margin: 0 auto;
+  /* margin: 0 auto; */
+    margin-top: -2rem;
   transform-origin: top left;
   width: 125.11%;    /* compensate for scale (1 / 0.9 ≈ 111%) */
   margin-bottom: -74rem;

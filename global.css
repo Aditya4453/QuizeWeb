@@ -1,0 +1,342 @@
+/* ============================
+   Merged Card-Related Styles
+   ============================
+   Card selectors gathered from all provided CSS sources.
+   Deduplicated, latest overrides kept, responsive styles included.
+*/
+
+/* ---- Generic Card Shells ---- */
+.lower .feature-card{
+    min-height: 320px;
+    border-radius: 30px;
+}
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(276px, 1fr));
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: var(--space-32);
+  /* width: 80vw; */
+  /* margin: auto; */
+  max-width: 1200px;
+}
+.feature-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-32);
+  margin-top: var(--space-32);
+  margin: auto;
+  /* width: 80vw; */
+  max-width: 1200px;
+}
+
+.feature-card {
+  background: white;
+  padding: var(--space-32) var(--space-24);
+  border-radius: 40px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.02);
+  transition: all var(--duration-normal) var(--ease-standard);
+  text-align: center;
+  min-height: 461px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  word-wrap: break-word;
+  hyphens: auto;
+  /* border: 1px solid black; */
+}
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+.feature-card h3 {
+  font-size: 25px;
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: var(--space-16);
+  color: var(--color-text);
+}
+.feature-card p {
+  color: var(--color-text);
+  line-height: var(--line-height-normal);
+  font-size: 1rem;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+.feature-icon {
+  width: 120px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--space-24);
+}
+
+.feature-icon img{
+    width: 100%;
+    height: 100%;
+}
+/* ---- Testimonial/Other Card Types ---- */
+.testimonial-card {
+  background: white;
+  min-height: 350px;
+  width: 100%;
+  padding: var(--space-24);
+  border-radius: 40px;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--duration-normal) var(--ease-standard);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  overflow: hidden;
+  word-wrap: break-word;
+  hyphens: auto;
+}
+.testimonial-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+/* ---- Benefits/Panel/Card-Like ---- */
+.benefit-card,
+.industry-item {
+  perspective: 1000px;
+  height: 30vh;
+  width: 100%;
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  touch-action: manipulation;
+}
+.benefit-card:hover .card-inner,
+.industry-item:hover .card-inner {
+  transform: rotateY(180deg);
+}
+.card-inner {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  position: relative;
+  border-radius: 40px;
+}
+.card-front,
+.card-back {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 40px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  left: 0;
+  box-shadow: var(--box-shadow);
+  overflow: hidden;
+}
+.card-front {
+  background: white;
+  border: 1px solid #E5E7EB;
+}
+.card-back {
+  background: #FFF0DA;
+  color: #151F4C;
+  transform: rotateY(180deg);
+  text-align: center;
+}
+.benefit-icon {
+  width: 100px;
+  height: 100px;
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  color: white;
+  font-size: 1.5rem;
+  overflow: hidden;
+}
+.benefit-card h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-heading);
+  margin-bottom: 0.8rem;
+  line-height: 1.3;
+  word-wrap: break-word;
+  hyphens: auto;
+}
+.benefit-card p {
+  font-size: 0.9rem;
+  color: #626C71;
+  line-height: 1.5;
+  word-wrap: break-word;
+  hyphens: auto;
+}
+.card-back h4 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #151F4C;
+}
+.card-back ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.card-back ul li {
+  padding: 0.3rem 0;
+  font-size: 0.9rem;
+  color: #151F4C;
+  opacity: 0.9;
+}
+.card-back ul li:before {
+  content: "✓ ";
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+/* ---- Flip Card for Feature/Why Choose Panels ---- */
+.flip-container {
+  perspective: 1200px;
+  min-height: 280px;
+  height: 36vh;
+  padding: 0;
+  width: 100%;
+  background: none;
+  border: none;
+}
+.flip-inner {
+  transition: transform 0.6s cubic-bezier(.4,2,.6,1);
+  transform-style: preserve-3d;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  border-radius: 40px;
+  min-height: 240px;
+}
+.flip-container:hover .flip-inner,
+.flip-container:focus-within .flip-inner {
+  transform: rotateY(180deg);
+}
+.flip-front, .flip-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  padding: var(--space-24);
+  background: white;
+  border-radius: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.flip-front .feature-icon {
+  font-size: 60px;
+  margin-bottom: var(--space-16);
+}
+.flip-back {
+  background: #FFF0DA;
+  transform: rotateY(180deg);
+  color: var(--color-primary);
+  text-align: center;
+}
+/* ---- Privacy Card ---- */
+.privacy-card {
+  background: white;
+  border-radius: 40px;
+  box-shadow: 0 4px 30px 0 rgba(250,116,62,0.13);
+  padding: 2.5rem 2rem 2rem 2rem;
+  margin: 0 auto;
+  font-size: 1.09rem;
+  color: #151f4c;
+  line-height: 1.7;
+}
+.privacy-card h2 {
+  font-size: 2rem;
+  margin-top: 2.1em;
+  margin-bottom: 0.75em;
+  font-weight: 400;
+  color: #151F4C;
+}
+.privacy-card p, .privacy-card ul, .privacy-card li {
+  font-size: 1rem;
+  color: #151f4cbe;
+}
+.privacy-card ul {
+  margin-left: 1.3em;
+  margin-bottom: 1em;
+}
+.privacy-card a {
+  color: #151F4C;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+.privacy-card a:hover {
+  color: var(--color-primary-hover);
+}
+/* ---- Responsive Breakpoints for Cards ---- */
+@media (max-width: 1024px) {
+  .feature-card, .testimonial-card, .benefit-card, .industry-item, .privacy-card {
+    min-height: 280px;
+    padding: var(--space-20);
+    width: 100%;
+  }
+  .feature-card h3, .testimonial-card h4, .benefit-card h3 {
+    font-size: 22px !important;
+  }
+}
+@media (max-width: 768px) {
+  .feature-card, .testimonial-card, .benefit-card, .industry-item, .privacy-card {
+    min-height: 250px;
+    padding: var(--space-20);
+  }
+  .card-front, .card-back {
+    padding: 1rem;
+    gap: 0.8rem;
+  }
+}
+@media (max-width: 480px) {
+  .feature-card, .testimonial-card, .benefit-card, .industry-item, .privacy-card {
+    min-height: 200px;
+    padding: 1rem 0.7rem;
+    font-size: 1rem;
+  }
+  .card-front, .card-back {
+    padding: 1rem;
+  }
+  .feature-card h3, .testimonial-card h4, .benefit-card h3 {
+    font-size: 1rem !important;
+  }
+}
+@media (max-width: 400px) {
+  .privacy-card {
+    font-size: 0.95rem;
+    padding: 1rem 0.3rem;
+  }
+}
+.feature-card {
+  position: relative;
+}
+
+.feature-divider {
+  width: 60%;
+  height: 1px;
+  background: #EAEAEA; /* soft gray line */
+  margin: 18px auto 18px auto; /* spacing above and below */
+  opacity: 1;
+}
+
