@@ -114,7 +114,7 @@ a:hover {
 
 /* ========== LAYOUT UTILITIES ========== */
 .container {
-  max-width: var(--container-xl);
+  max-width: 1300px;
   margin: 0 auto;
   padding: 0 var(--space-20);
 }
@@ -504,7 +504,7 @@ a:hover {
 .key-benefits__tabs {
   flex: 1 1 320px;
   width: 60%;
-  padding: 5rem;
+  padding: 5rem 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -655,7 +655,7 @@ a:hover {
 
 .testimonial-info span {
   color: black;
-  font-size: 15px;
+  font-size: 20px;
 }
 
 .testimonial-card p {
@@ -958,7 +958,7 @@ a:hover {
   .account-protection,
   .why-choose,
   .success-spotlight {
-    padding: 8vh 0;
+    padding: 8vh 1rem;
   }
   
   .account-protection h2,

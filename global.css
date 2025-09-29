@@ -7,8 +7,18 @@
 
 /* ---- Generic Card Shells ---- */
 .lower .feature-card{
-    min-height: 320px;
+    min-height: 380px;
     border-radius: 30px;
+    padding: 8px;
+    width: 300px;
+}
+.puno{
+  width: 420px;
+  height: 500px;
+}
+.turnkey-feature .features-grid{
+
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 }
 .features-grid {
   display: grid;
@@ -17,13 +27,14 @@
   justify-content: center;
   gap: 2rem;
   margin-top: var(--space-32);
+  width: 100%;
   /* width: 80vw; */
   /* margin: auto; */
-  max-width: 1200px;
+  /* max-width: 1200px; */
 }
 .feature-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   align-items: center;
   justify-content: center;
   gap: var(--space-32);
@@ -145,8 +156,8 @@
   justify-content: center;
   align-items: center;
   left: 0;
-  box-shadow: var(--box-shadow);
   overflow: hidden;
+  box-shadow: var(--box-shadow);
 }
 .card-front {
   background: white;
@@ -312,7 +323,7 @@
 @media (max-width: 480px) {
   .feature-card, .testimonial-card, .benefit-card, .industry-item, .privacy-card {
     min-height: 200px;
-    padding: 1rem 0.7rem;
+    padding: 2rem 0.7rem;
     font-size: 1rem;
   }
   .card-front, .card-back {
@@ -320,6 +331,14 @@
   }
   .feature-card h3, .testimonial-card h4, .benefit-card h3 {
     font-size: 1rem !important;
+  }
+  .features-grid{
+    max-width: none;
+    width: max-content;
+    margin: auto;
+  }
+  .feature-container{
+    max-width: none;
   }
 }
 @media (max-width: 400px) {
@@ -333,10 +352,40 @@
 }
 
 .feature-divider {
-  width: 60%;
+  width: 90%;
   height: 1px;
-  background: #EAEAEA; /* soft gray line */
+  background: #ffffff;
+background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(138, 143, 165, 1) 50%, rgba(255, 255, 255, 1) 100%);
   margin: 18px auto 18px auto; /* spacing above and below */
   opacity: 1;
 }
 
+@media (min-width: 481px) and (max-width: 1100px) {
+  .features-grid, .feature-container {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    max-width: 95vw;
+    margin-left: auto;
+    margin-right: auto;
+    gap: var(--space-24);
+  }
+  
+  .feature-card {
+    min-height: auto;
+    padding: var(--space-20) var(--space-16);
+  }
+
+  .feature-card h3 {
+    font-size: 1.5rem;
+  }
+
+  .feature-card p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+
+  .feature-icon {
+    width: 100px;
+    height: 100px;
+    margin-bottom: var(--space-16);
+  }
+}

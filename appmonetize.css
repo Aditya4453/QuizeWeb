@@ -114,7 +114,7 @@ a:hover {
 
 /* ========== LAYOUT UTILITIES ========== */
 .container {
-  /* max-width: var(--container-xl); */
+  max-width: 1300px;
   margin: 0 auto;
   padding: 0 16px;
 }
@@ -363,18 +363,6 @@ h2 .account-protection h2 {
   margin-bottom: var(--space-20);
   color: var(--color-text);
   letter-spacing: var(--letter-spacing-tight);
-}
-
-.features-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
-  align-items: center;
-  justify-content: center;
-  gap: 2rem;
-  margin-top: var(--space-32);
-  width: 80vw;
-  margin: auto;
-  /* max-width: 1200px; */
 }
 
 .feature-item {
@@ -1021,5 +1009,28 @@ h2 .account-protection h2 {
   
   .benefit-panel h3 {
     font-size: 1.5rem;
+  }
+}
+@media (max-width: 480px) {
+  .products-section {
+    padding: 6vh 3vw;
+    flex-direction: column;
+  }
+  .products-text h2 {
+    font-size: 2rem;
+  }
+  .products-text p {
+    font-size: 16px;
+  }
+  .product-btn span {
+    font-size: 1.2rem;
+  }
+  .product-btn img {
+    height: 60px;
+    width: 70px;
+    padding: 15px;
+  }
+  .products-image img {
+    width: 280px;
   }
 }
